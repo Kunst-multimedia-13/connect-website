@@ -21,4 +21,3 @@ window.addEventListener("scroll", function() {
   project_pic.style.objectPosition = "50% " + (value * 0.05 + 10) + "%";
 })
 
-

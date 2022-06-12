@@ -14,33 +14,29 @@
   /** -- **/
   --white: #ffffff;
   --border: #eaeaea;
+  --nav-circle: 8px;
 }
 
 html {
   scroll-behavior: smooth; 
 }
 
-.red_bg {
-  background: red;
-}
-
 /*--------------------------------------------------------- Layout ---------------------------------------------------------*/
 /** check https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout**/
 
-body, footer, .content {
-  margin: 36px 0px 0px 0px;
+body, footer, .content, header {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   gap: 24px;
 }
 
-body > *, footer > *, .content > * {
+body > *, footer > *, .content > *, header > * {
   grid-column: col-start / span 12;
 }
 
 /** On Desktop + Tablet **/
 @media (min-width: 767px) {
-  .content, .main-header, .footer-content {
+  .content, .main-header, .footer-content, header {
     grid-column: col-start 2 / span 10;
   }
   .text-div {
@@ -185,7 +181,7 @@ h6 {
   align-items: center;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--black);
 }
 
 .body_large {
@@ -332,6 +328,41 @@ button {
   fill: var(--secondary-shade2);
 }
 
+/** navigation **/
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu h6:hover {
+  color: var(--primary);
+  transition: 1s;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.selected_nav::after {
+  content: " ";
+  display: block;
+  width: var(--nav-circle);
+  height: var(--nav-circle);
+  position: relative;
+  background-color: var(--primary);
+  border-radius: 50%;
+  left: -52%;
+  transform: translateY(15px);
+}
+
 /*--------------------------------------------------------- Spacing ---------------------------------------------------------*/
 
 .spacing_4 {
@@ -390,4 +421,5 @@ button {
 .black_outline {
   box-shadow: 42px 42px white, -25px -25px 0px -10px white, -25px -25px var(--black);
 }
+
 
