@@ -347,12 +347,16 @@ button {
   transition: 1s;
 }
 
+.selected_nav {
+  margin-right: -8px;
+}
+
 ul {
   padding-inline-start: 0;
 }
 
 .selected_nav::after {
-  content: " ";
+  content: "";
   display: block;
   width: var(--nav-circle);
   height: var(--nav-circle);
