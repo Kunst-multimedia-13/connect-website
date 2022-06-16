@@ -1,23 +1,26 @@
 
 
-var allPics = new Array ("Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Tobias", "Yunuo");
+var artistsBackup = new Array("Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Tobias", "Yunuo");
+var artists = artistsBackup.slice();
 
-
-
-// Code for random picture
-window.onload = choosePic;
-
-function choosePic() {
-  var rdm_num = Math.floor(Math.random() * allPics.length);
-  document.getElementById("curr-project-img").src = "ArtworkPreviews/Artist=PP " + allPics[rdm_num] + ".jpg";
+function createThumbnails() {
+  let artworkCount = 0;
+  while (artists.length > 0) {
+    if (artworkCount % 5 == 0) {
+      document.getElementById("gallery").append(document.createElement('br'));
+    }
+    artworkCount++;
+    let newThumbnail = document.createElement('img');
+    let currentArtist = artists[Math.floor(Math.random() * artists.length)];
+    newThumbnail.src = "ArtworkPreviews/Artist=PP " + currentArtist + ".jpg";
+    newThumbnail.width = "128";
+    newThumbnail.height = "128";
+    document.getElementById("gallery").append(newThumbnail);
+    //newThumbnail.addEventListener("click", presentArtwork(currentArtist));
+    artists = artists.filter((artist) => { return artist != currentArtist });
+  }
 }
 
 
-// Code for project image parallax
-window.addEventListener("scroll", function() {
-  var value = window.scrollY;
-  let project_pic = document.getElementById("curr-project-img");
-  //project_pic.style.objectPosition = value * 10 + "% " + value * 10 + "%";
-  project_pic.style.objectPosition = "50% " + (value * 0.05 + 10) + "%";
-})
-
+// Code for random picture
+window.onload = createThumbnails;
