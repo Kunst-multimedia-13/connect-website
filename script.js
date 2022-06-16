@@ -22,5 +22,6 @@ function createThumbnails() {
 }
 
 
+
 // Code for random picture
 window.onload = createThumbnails;
