@@ -8,9 +8,9 @@
     --black: #091414;
     /** old **/
     --grey: #8b8c8c;
-    --secondary: #72b0cf;
+    --secondary: #efe9e4;
     --secondary-shade1: #497185;
-    --secondary-shade2: #a5cde1;
+    --secondary-shade2: #efe9e4;
     /** -- **/
     --white: #ffffff;
     --border: #eaeaea;
@@ -172,7 +172,7 @@ h3 {
 }
 
 h4 {
-    font-family: "degular-display", "Verdana", sans-serif;
+    font-family: "Inter", "Verdana", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -180,7 +180,7 @@ h4 {
     display: flex;
     align-items: center;
     letter-spacing: 0.5px;
-    color: var(--black);
+    color: var(--primary);
 }
 
 h5 {
@@ -312,7 +312,6 @@ button {
     align-items: center;
     padding: 10px 20px;
     border: 1px solid var(--primary);
-    border-radius: 38px;
     color: var(--white);
     background: var(--primary);
     transition: background 1s, border 1s;
@@ -326,7 +325,6 @@ button {
     align-items: center;
     padding: 10px 20px;
     border: 1px solid var(--primary);
-    border-radius: 30px;
     color: var(--primary);
     background-color: var(--white);
     transition: border 1s, background 1s, color 1s;
