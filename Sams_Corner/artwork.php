@@ -1,6 +1,7 @@
 <?php
 if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
-    $lang = "german";
+    $titlePrimary = "h5";
+    $titleSecondary = "h6";
     $artist = $_GET['artist'];
     $json = json_decode(file_get_contents("JSONs/" . $artist . "_info.json"));
 
@@ -9,26 +10,20 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         global $json;
         echo $json->$key;
     }
-    function returnArrayValue(string $jsonKey, int $arrayKey, string $default) {
+
+    function returnArrayValue(string $jsonKey, int $arrayKey, string $default)
+    {
         global $json;
         if (!isset($json->$jsonKey[$arrayKey])) {
-        return $default . " " . $arrayKey;
+            return $default . " " . $arrayKey;
         }
         return $json->$jsonKey[$arrayKey];
     }
-
-    function createImg(string $id, string $class, string $imgName, string $altEnglish, string $altGerman)
+    function createImg(string $id, string $class, string $imgName, string $altGerman, string $altEnglish)
     {
-        global $artist, $lang;
-        echo "<img id=" . $id . "class = " . $class . " src = images/" . $artist . "_" . $imgName . ".jpg";
-        if ($lang == "english") {
-            echo " alt='" . $altEnglish . "'";
-        } else {
-            echo " alt='" . $altGerman . "'";
-        }
-        echo ">";
+        global $artist;
+        echo "<img id=" . $id . "class = " . $class . " src = media/" . $artist . "_" . $imgName . ".jpg alt='" . $altGerman . " | " . $altEnglish . "' >";
     }
-
 ?>
     <!DOCTYPE html>
     <html lang="EN">
@@ -59,84 +54,92 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         </header>
 
         <section class="content">
-            <?php if (file_exists("images/" . $artist . "_header.jpg")) {
-                createImg("header-image", "", "header", "header image", "Kopfzeilenbild");
-            }
+            <?php
+            # HEADER IMAGE
+            if (file_exists("media/" . $artist . "_header.jpg")) createImg("header-image", "", "header", "Kopfzeilenbild", "header image");
 
+            #PROJECT TITILE
             $key = "project-title";
-            if (isset($json->$key)) { ?>
-                <h1 id="project-title"><?php echoObjValue($key) ?></h1>
-            <?php }
+            if (isset($json->$key)) echo "<h1 id='project-title'>" . $json->$key . "</h1>";
 
+            # ARTIST NAME
             $key = "artist-name";
-            if (isset($json->$key)) { ?>
-                <h3 id="artist-name"><?php echoObjValue($key) ?></h3>
-            <?php }
+            if (isset($json->$key)) echo "<h3 id='artist-name'>" . $json->$key, "</h3>";
 
-            $key = "project-description-" . $lang;
-            if (isset($json->$key)) { ?>
-                <h6 id="project-description-introduction">
-                    <?php
-                    if ($lang == "english") {
-                        echo "ABOUT THE PROJECT";
-                    } else {
-                        echo "DAS PROJEKT";
-                    } ?> </h6>
-                <p id="project-description" class="body_standard"><?php echoObjValue("project-description-" . $lang) ?></p>
-            <?php }
+            # PROJECT DESCRIPTION TITLE GERMAN
+            $key = "project-description-german";
+            if (isset($json->$key)) echo "<" . $titlePrimary . ">DAS PROJEKT</" . $titlePrimary . ">";
 
-            $key = "artist-description-" . $lang;
+            # PROJECT DESCRIPTION TITLE ENGLISH
+            $key = "project-description-english";
+            if (isset($json->$key)) echo "<" . $titleSecondary . ">ABOUT THE PROJECT</" . $titleSecondary . ">";
+
+            # PROJECT DESCRIPTION GERMAN
+            $key = "project-description-german";
+            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+
+            # PROJECT DESCRIPTION ENGLISH
+            $key = "project-description-english";
+            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+
+            # ARTIST DESCRIPTION TITLE GERMAN
+            $key = "artist-description-german";
             if (isset($json->$key)) {
-            ?> <h6 id="artist-description-introduction">
-                    <?php
-                    if ($lang == "english") {
-                        echo "ABOUT THE ARTIST";
-                    } else {
-                        if ($artist == ("Tobias" || "Samuel")) echo "ZUM KÜNSTLER";
-                        else {
-                            echo "ZUR KÜNSTLERIN";
-                        }
-                    } ?>
-                </h6>
-            <?php
-            } elseif (file_exists("images/" . $artist . "_portrait.jpg")) {
-            ?> <h6 id="artist-description-introduction">
-                    <?php
-                    if ($lang == "english") {
-                        echo "THE ARTIST";
-                    } else {
-                        if ($artist == ("Tobias" || "Samuel")) echo "DER KÜNSTLER";
-                        else {
-                            echo "DIE KÜNSTLERIN";
-                        }
-                    } ?>
-                </h6>
-            <?php
+                if ($artist == ("Tobias" || "Samuel")) echo "<" . $titlePrimary . ">ZUM KÜNSTLER</" . $titlePrimary . ">";
+                else echo "<" . $titlePrimary . ">ZUR KÜNSTLERIN</" . $titlePrimary . ">";
+            } elseif (file_exists("media/" . $artist . "_portrait.jpg")) {
+                if ($artist == ("Tobias" || "Samuel")) echo "<" . $titlePrimary . ">DER KÜNSTLER</" . $titlePrimary . ">";
+                else echo "<" . $titlePrimary . ">DIE KÜNSTLERIN</" . $titlePrimary . ">";
             }
 
-            if (file_exists("images/" . $artist . "_portrait.jpg")) {
-                createImg("artist-protrait", "", "portrait", "a potrait of the artist", "Künstlerportrait");
+            # ARTIST DESCRIPTION TITLE ENGLISH
+            $key = "artist-description-english";
+            if (isset($json->$key)) echo "<" . $titleSecondary . ">ABOUT THE ARTIST</" . $titleSecondary . ">";
+            elseif (file_exists("media/" . $artist . "_portrait.jpg")) echo "<" . $titleSecondary . ">THE ARTIST</" . $titleSecondary . ">";
+
+            # ARTIST PORTRAIT
+            if (file_exists("meida/" . $artist . "_portrait.jpg")) {
+                createImg("artist-protrait", "", "portrait", "Künstlerportrait", "a potrait of the artist");
             }
 
-            $key = "artist-description-" . $lang;
-            if (isset($json->$key)) {
-            ?><p id="artist-description" class="body_standard"><?php echoObjValue($key) ?></p>
-            <?php }
+            # ARTIST DESCRIPTION GERMAN
+            $key = "artist-description-german";
+            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
 
+            # ARTIST DESCRIPTION ENGLISH
+            $key = "artist-description-english";
+            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+
+            # SOCIALS
+            $key = "socials";
+            foreach ($json->$key as $currentPlatform) {
+                $key = key($currentPlatform);
+                if ($currentPlatform->$key != "") {
+            ?>
+                    <button onclick= "window.open('<?php echo $currentPlatform->$key ?>');"></button>
+            <?php
+                }
+            }
+
+            # IMAGE GALLERY
             $currentArtwork = 1;
-            while (file_exists("images/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
+            while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
                 if ($currentArtwork % 3 == 0) echo "<br />";
-                createImg("artwork-" . $currentArtwork, "artwork-image", "artwork_" . $currentArtwork, returnArrayValue("images-altText-english", $currentArtwork-1, "gallery image ". $currentArtwork), returnArrayValue("images-altText-german", $currentArtwork-1, "Galeriebild ". $currentArtwork));
+                createImg("artwork-" . $currentArtwork, "artwork-image", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
                 $currentArtwork++;
             }
 
+            # VIDEO GALLERY
             $key = "videos-links";
             $currentVideo = 1;
-            foreach ($json->$key as $currentVideoLink) {
+            while (file_exists("media/" . $artist . "_video_" . $currentVideo . ".mp4")) {
                 if ($currentVideo % 3 == 0) echo "<br />";
-                ?>
-                <iframe width = 480 height = 270 class = "artwork-video" src = <?php echo $currentVideoLink. "?autoplay=1&mute=1?loop=1 title = ".returnArrayValue("videos-altTexts-".$lang, $currentVideo-1, "Video ". $currentVideo); ?>></iframe>
-                <?php
+                echo "<video width='1080' height='720' autoplay muted controls"
+                    . " alt='" . returnArrayValue("videos-altTexts-german", $currentArtwork - 1, "Video" . $currentArtwork) . " | " . returnArrayValue("videos-altTexts-english", $currentArtwork - 1, "video" . $currentArtwork) . "'"
+                    . " src='media/" . $artist . "_video_" . $currentVideo . ".mp4" . "' type='video/mp4'>"
+                    . "Ihr Browser unterstützt dieses Videoformat nicht | Your browser does not support this video file"
+                    . "</video>";
+                $currentVideo++;
             }
             ?>
         </section>
