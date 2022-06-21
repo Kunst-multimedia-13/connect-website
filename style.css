@@ -9,7 +9,7 @@
     /** old **/
     --grey: #8b8c8c;
     --secondary: #efe9e4;
-    --secondary-shade1: #497185;
+    --secondary-shade1: #efe9e4;
     --secondary-shade2: #efe9e4;
     /** -- **/
     --white: #ffffff;
@@ -53,8 +53,15 @@ header>* {
     header {
         grid-column: col-start 2 / span 10;
     }
+    .logo-div {
+        grid-column: col-start 3 / span 3;
+    }
     .text-div {
         grid-column: col-start / span 5;
+    }
+    .text-div-right {
+        grid-column: col-start 5 / span 8;
+        background-color: var(--secondary);
     }
     .pic-div {
         grid-column: col-start 7 / span 6;
@@ -77,6 +84,10 @@ header>* {
     .pic-div {
         grid-column: col-start / span 11;
     }
+    .text-div-right {
+        grid-column: col-start 2 / span 11;
+        background-color: var(--secondary);
+    }
     .logo-large {
         max-width: 100%;
     }
@@ -93,7 +104,7 @@ header>* {
 }
 
 #info-block {
-    padding-top: 100px;
+    padding-top: 5vh;
 }
 
 #privacy-policy_terms-of-service {
@@ -293,6 +304,23 @@ a:visited {
     text-transform: uppercase;
 }
 
+.background-image {
+    background-image: url(assets/rectangle_2.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 102%;
+    background-position-y: 0%;
+    background-size: auto;
+}
+
+.content {
+    background-color: none;
+}
+
+.logo-large {
+    background-color: var(--white);
+    padding: 5%;
+}
+
 
 /*--------------------------------------------------------- Component styles ---------------------------------------------------------*/
 
@@ -333,8 +361,8 @@ button {
 
 .btn_primary:hover {
     border: 1px solid var(--secondary);
-    background-color: var(--secondary);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--primary);
 }
 
 .btn_secondary:hover {
