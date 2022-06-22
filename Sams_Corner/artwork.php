@@ -5,12 +5,6 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
     $artist = $_GET['artist'];
     $json = json_decode(file_get_contents("JSONs/" . $artist . "_info.json"));
 
-    function echoObjValue(string $key)
-    {
-        global $json;
-        echo $json->$key;
-    }
-
     function returnArrayValue(string $jsonKey, int $arrayKey, string $default)
     {
         global $json;
@@ -98,7 +92,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             elseif (file_exists("media/" . $artist . "_portrait.jpg")) echo "<" . $titleSecondary . ">THE ARTIST</" . $titleSecondary . ">";
 
             # ARTIST PORTRAIT
-            if (file_exists("meida/" . $artist . "_portrait.jpg")) {
+            if (file_exists("media/" . $artist . "_portrait.jpg")) {
                 createImg("artist-protrait", "", "portrait", "Künstlerportrait", "a potrait of the artist");
             }
 
