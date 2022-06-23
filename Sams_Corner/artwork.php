@@ -8,7 +8,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
     function returnArrayValue(string $jsonKey, int $arrayKey, string $default)
     {
         global $json;
-        if (!isset($json->$jsonKey[$arrayKey])) {
+        if (!isset($json->$jsonKey[$arrayKey]) || $json->$jsonKey[$arrayKey] != "") {
             return $default . " " . $arrayKey;
         }
         return $json->$jsonKey[$arrayKey];
@@ -54,31 +54,31 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             #PROJECT TITILE
             $key = "project-title";
-            if (isset($json->$key)) echo "<h1 id='project-title'>" . $json->$key . "</h1>";
+            if (isset($json->$key) && $json->$key != "") echo "<h1 id='project-title'>" . $json->$key . "</h1>";
 
             # ARTIST NAME
             $key = "artist-name";
-            if (isset($json->$key)) echo "<h3 id='artist-name'>" . $json->$key, "</h3>";
+            if (isset($json->$key) && $json->$key != "") echo "<h3 id='artist-name'>" . $json->$key, "</h3>";
 
             # PROJECT DESCRIPTION TITLE GERMAN
             $key = "project-description-german";
-            if (isset($json->$key)) echo "<" . $titlePrimary . ">DAS PROJEKT</" . $titlePrimary . ">";
+            if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary . ">DAS PROJEKT</" . $titlePrimary . ">";
 
             # PROJECT DESCRIPTION TITLE ENGLISH
             $key = "project-description-english";
-            if (isset($json->$key)) echo "<" . $titleSecondary . ">ABOUT THE PROJECT</" . $titleSecondary . ">";
+            if (isset($json->$key) && $json->$key != "") echo "<" . $titleSecondary . ">ABOUT THE PROJECT</" . $titleSecondary . ">";
 
             # PROJECT DESCRIPTION GERMAN
             $key = "project-description-german";
-            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
 
             # PROJECT DESCRIPTION ENGLISH
             $key = "project-description-english";
-            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
 
             # ARTIST DESCRIPTION TITLE GERMAN
             $key = "artist-description-german";
-            if (isset($json->$key)) {
+            if (isset($json->$key) && $json->$key != "") {
                 if ($artist == ("Tobias" || "Samuel")) echo "<" . $titlePrimary . ">ZUM KÜNSTLER</" . $titlePrimary . ">";
                 else echo "<" . $titlePrimary . ">ZUR KÜNSTLERIN</" . $titlePrimary . ">";
             } elseif (file_exists("media/" . $artist . "_portrait.jpg")) {
@@ -88,7 +88,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # ARTIST DESCRIPTION TITLE ENGLISH
             $key = "artist-description-english";
-            if (isset($json->$key)) echo "<" . $titleSecondary . ">ABOUT THE ARTIST</" . $titleSecondary . ">";
+            if (isset($json->$key) && $json->$key != "") echo "<" . $titleSecondary . ">ABOUT THE ARTIST</" . $titleSecondary . ">";
             elseif (file_exists("media/" . $artist . "_portrait.jpg")) echo "<" . $titleSecondary . ">THE ARTIST</" . $titleSecondary . ">";
 
             # ARTIST PORTRAIT
@@ -98,20 +98,25 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # ARTIST DESCRIPTION GERMAN
             $key = "artist-description-german";
-            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
 
             # ARTIST DESCRIPTION ENGLISH
             $key = "artist-description-english";
-            if (isset($json->$key)) echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
+
+            # EMAIL
+            $key = "email";
+            if (isset($json->$key) && $json->$key != "") echo "<a href='mailto:".$json->$key."'>".$json->$key."</a>";
 
             # SOCIALS
-            $key = "socials";
-            foreach ($json->$key as $currentPlatform) {
-                $key = key($currentPlatform);
-                if ($currentPlatform->$key != "") {
-            ?>
-                    <button onclick= "window.open('<?php echo $currentPlatform->$key ?>');"></button>
-            <?php
+            if (file_exists("JSONs/social_icons.json")) {
+                $svgJson = json_decode(file_get_contents("JSONs/social_icons.json"));
+                $key = "socials";
+                foreach ($json->$key as $currentPlatform) {
+                    $key = key($currentPlatform);
+                    if ($currentPlatform->$key != "" && isset($svgJson->$key)) {
+                        echo "<a href=" . $currentPlatform->$key . " target='_blank'><svg class='icon' width=64 height=64 viewbox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>" . $svgJson->$key . "</svg></a>";
+                    }
                 }
             }
 

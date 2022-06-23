@@ -9,8 +9,9 @@
     "images-altTexts-english": ["an in-game scene featuring the player character on a dry desert island floating in space"],
     "videos-altTexts-german": ["Prototyp - May 2021"],
     "videos-altTexts-english": ["prototype may 2021"],
-    "contact": "sambrookmanamissah@gmail.com",
+    "email": "sambrookmanamissah@gmail.com",
     "socials": [
+        {"website": ""},
         {"instagram": ""},
         {"linkedin": ""},
         {"behance": ""},
@@ -22,10 +23,7 @@
         {"twitter": "https://twitter.com/SamuelBrookman"},
         {"youtube": ""},
         {"soundcloud": ""},
-        {"fiverr": ""},
         {"tumblr": ""},
-        {"vimeo": ""},
-        {"github": ""},
-        {"gitlab": ""}
+        {"github": ""}
     ]
 }
