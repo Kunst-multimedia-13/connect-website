@@ -35,6 +35,10 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         <title>con:nect</title>
         <link rel="stylesheet" href="styleN.css" />
         <link id="favicon" rel="icon" href="https://cdn.glitch.global/cd1845f1-7885-4da2-ad8b-cd3882b8f972/Connect_Illus_Dots.svg?v=1652605879062" type="image/svg">
+
+        <!-- Picture carousel by flickity -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     </head>
 
     <body>
@@ -140,28 +144,34 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             echo "<div class='spacing_8'></div>";
 
             # SOCIALS
-            echo "<div style='display:block;'";
+            echo "<div style='display:block;'>";
             if (file_exists("JSONs/social_icons.json")) {
                 $svgJson = json_decode(file_get_contents("JSONs/social_icons.json"));
                 $key = "socials";
                 foreach ($json->$key as $currentPlatform) {
                     $key = key($currentPlatform);
                     if ($currentPlatform->$key != "" && isset($svgJson->$key)) {
-                        echo "<a href=" . $currentPlatform->$key . " target='_blank'><svg class='icon' width=64 height=64 viewbox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>" . $svgJson->$key . "</svg></a>";
+                        echo "<a style='margin:0; padding-right: 8px;' href=" . $currentPlatform->$key . " target='_blank'><svg class='icon' width=32 height=32 viewbox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>" . $svgJson->$key . "</svg></a>";
                     }
                 }
             }
             echo "</div></div>";
 
             # IMAGE GALLERY
+            echo "<div class='carousel' data-flickity='{ \"wrap-around\":true }'>";
             $currentArtwork = 1;
             while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
-                if ($currentArtwork % 3 == 0) echo "<br />";
-                createImg("artwork-" . $currentArtwork, "artwork-image", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
+                // if ($currentArtwork % 3 == 0) echo "<br />";
+                createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
                 $currentArtwork++;
             }
+            echo "</div>";
+
+            # SPACING
+            echo "<div class='spacing_64'></div>";
 
             # VIDEO GALLERY
+            echo "<div style='display:flex; justify-content: space-around;'>";
             $key = "videos-links";
             $currentVideo = 1;
             while (file_exists("media/" . $artist . "_video_" . $currentVideo . ".mp4")) {
@@ -173,6 +183,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                     . "</video>";
                 $currentVideo++;
             }
+            echo "</div>";
             ?>
         </section>
 
