@@ -71,21 +71,29 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             $key = "project-title";
             if (isset($json->$key) && $json->$key != "") echo "<h1 id='project-title'>" . $json->$key . "</h1>";
 
+            ## DIV PROJECT GERMAN
+            echo "<div class='" . $styleDE . " " . $styleColumn_1of2 . "'>";
             # PROJECT DESCRIPTION TITLE GERMAN
             $key = "project-description-german";
-            if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary . " class='" . $styleDE . " " . $styleColumn_1of2 . "'" . ">Das Projekt</" . $titlePrimary . ">";
-
-            # PROJECT DESCRIPTION TITLE ENGLISH
-            $key = "project-description-english";
-            if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary .  " class='" . $styleEN . " " . $styleColumn_2of2 . "'" . ">About the project</" . $titlePrimary . ">";
+            if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary . ">Das Projekt</" . $titlePrimary . ">";
 
             # PROJECT DESCRIPTION GERMAN
             $key = "project-description-german";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard " . $styleColumn_1of2 . "'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
+
+            echo "</div>";
+
+            ## DIV PROJECT ENGLISH
+            echo "<div class='" . $styleDE . " " . $styleColumn_2of2 . "'>";
+            # PROJECT DESCRIPTION TITLE ENGLISH
+            $key = "project-description-english";
+            if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary .  " class='" . $styleEN . "'" . ">About the project</" . $titlePrimary . ">";
 
             # PROJECT DESCRIPTION ENGLISH
             $key = "project-description-english";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard " . $styleEN . " " . $styleColumn_2of2 . "'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard " . $styleEN . "'>" . $json->$key . "</p>";
+
+            echo "</div>";
 
             # SPACING
             echo "<div class='spacing_64'></div>";
@@ -108,9 +116,6 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                 else echo "<" . $titlePrimary . ">Die Künstlerin</" . $titlePrimary . ">";
             }
 
-            # SPACING
-            echo "<div class='spacing_24'></div>";
-
             # ARTIST DESCRIPTION GERMAN
             $key = "artist-description-german";
             if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
@@ -125,9 +130,6 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             $key = "artist-description-english";
             if (isset($json->$key) && $json->$key != "") echo "<" . $titlePrimary . " class='" . $styleEN . "'>About the artist</" . $titlePrimary . ">";
             elseif (file_exists("media/" . $artist . "_portrait.jpg")) echo "<" . $titlePrimary . " class='" . $styleEN . "'>The artist</" . $titlePrimary . ">";
-
-            # SPACING
-            echo "<div class='spacing_24'></div>";
 
             # ARTIST DESCRIPTION ENGLISH
             $key = "artist-description-english";
@@ -156,6 +158,9 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                 }
             }
             echo "</div></div>";
+
+            # SPACING
+            echo "<div class='spacing_64'></div>";
 
             # IMAGE GALLERY
             echo "<div class='carousel' data-flickity='{ \"wrap-around\":true }'>";
