@@ -4,23 +4,18 @@ var artists = artistsBackup.slice();
 function createThumbnails() {
     let artworkCount = 0;
     while (artists.length > 0) {
-        // if (artworkCount % 5 == 0) {
-        //   document.getElementById("gallery").append(document.createElement('br'));
-        // }
+        if (artworkCount % 5 == 0) {
+            document.getElementById("gallery").append(document.createElement('br'));
+        }
         artworkCount++;
         let newThumbnail = document.createElement('input');
         let currentArtist = artists[Math.floor(Math.random() * artists.length)];
-        // newThumbnail.setAttribute('class', 'galleryImage');
-
-
         newThumbnail.type = "submit";
         newThumbnail.value = currentArtist;
         newThumbnail.name = "artist";
-        // newThumbnail.style = "background-image: url('ArtworkPreviews/Artist=PP " + currentArtist + ".jpg'); background-position: center; background-size: cover; width: 128px; height: 128px; border-style: none; color: rgba(0,0,0,0)";
-
-        newThumbnail.style = "background-image: url('ArtworkPreviews/Artist=PP " + currentArtist + ".jpg'); background-position: center; width: 100%; height: auto; border-style: none; background-color: none; padding: 0.5em 0em; padding-left: 0.5em; padding-right: 0.5em;";
-        newThumbnail.setAttribute('class', 'galleryImage');
-
+        //newThumbnail.setAttribute('class', 'galleryImage');
+        newThumbnail.style = "background-image: url('ArtworkPreviews/Artist=PP " + currentArtist + ".jpg');";
+        newThumbnail.className = "galleryImage";
         document.getElementById("gallery").append(newThumbnail);
         artists = artists.filter((artist) => { return artist != currentArtist });
     }

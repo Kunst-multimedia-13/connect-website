@@ -11,9 +11,8 @@
     --grey: #8b8c8c;
     /**--secondary: #efe9e4;
     --secondary-shade1: #efe9e4;
-    **/
     --secondary-shade2: #efe9e4;
-    
+     -- **/
     --white: #ffffff;
     --border: #eaeaea;
     --nav-circle: 8px;
@@ -55,10 +54,6 @@ header>* {
     width: 100%;
     height: auto;
     padding: 0.4em 0em;
-    background-position: center;
-    background-size: cover;
-    border-style: none;
-    color: rgba(0, 0, 0, 0);
 }
 
 
