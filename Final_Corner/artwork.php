@@ -163,14 +163,18 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             echo "<div class='spacing_64'></div>";
 
             # IMAGE GALLERY
-            echo "<div class='carousel' data-flickity='{ \"wrap-around\":true }'>";
             $currentArtwork = 1;
-            while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
-                // if ($currentArtwork % 3 == 0) echo "<br />";
-                createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
-                $currentArtwork++;
+            if (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
+                ?>
+                <div class=>...... 
+                <?php
+                while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
+                    // if ($currentArtwork % 3 == 0) echo "<br />";
+                    createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
+                    $currentArtwork++;
+                }
+                echo "</div>";
             }
-            echo "</div>";
 
             # SPACING
             echo "<div class='spacing_64'></div>";

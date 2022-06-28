@@ -14,6 +14,9 @@ function createThumbnails() {
         newThumbnail.value = currentArtist;
         newThumbnail.name = "artist";
         //newThumbnail.setAttribute('class', 'galleryImage');
+        tempImage = document.createElement('img');
+        tempImage.src = "ArtworkPreviews/Artist=PP " + currentArtist + ".jpg";
+        document.append(tempImage);
         newThumbnail.style = "background-image: url('ArtworkPreviews/Artist=PP " + currentArtist + ".jpg');";
         newThumbnail.className = "galleryImage";
         document.getElementById("gallery").append(newThumbnail);
