@@ -46,7 +46,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             <nav class="navbar">
                 <ul class="menu body_large">
                     <li><a href="./index.html">
-                            <h6 class="selected_nav">Home</h6>
+                            <h6>Home</h6>
                         </a></li>
                     <li><a href="./about_us.html">
                             <h6>About us</h6>
@@ -62,6 +62,20 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             <?php
             # HEADER IMAGE
             if (file_exists("media/" . $artist . "_header.jpg")) createImg("header-img", "header-img", "header", "Kopfzeilenbild", "header image");
+
+            # TAGS
+            $key = "tags";
+            $totalTags = 3;
+            if (isset($json->$key) && $json->$key != "") {
+                echo "<h6 class='body_large' style='color: var(--secondary-shade1)'>";
+                for ($currentTag = 0; $currentTag < $totalTags; $currentTag++) {
+                    echo $json->$key[$currentTag];
+                    if ($currentTag < 2) {
+                        echo "    •    ";
+                    }
+                }
+                echo "</h6>";
+            }
 
             # ARTIST NAME
             $key = "artist-name";
@@ -163,14 +177,18 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             echo "<div class='spacing_64'></div>";
 
             # IMAGE GALLERY
-            echo "<div class='carousel' data-flickity='{ \"wrap-around\":true }'>";
             $currentArtwork = 1;
-            while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
-                // if ($currentArtwork % 3 == 0) echo "<br />";
-                createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
-                $currentArtwork++;
+            if (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
+            ?>
+                <div class='carousel' data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+                <?php
+                while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
+                    // if ($currentArtwork % 3 == 0) echo "<br />";
+                    createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
+                    $currentArtwork++;
+                }
+                echo "</div>";
             }
-            echo "</div>";
 
             # SPACING
             echo "<div class='spacing_64'></div>";
@@ -189,7 +207,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                 $currentVideo++;
             }
             echo "</div>";
-            ?>
+                ?>
         </section>
 
         <div class="spacing_64"></div>

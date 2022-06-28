@@ -10,7 +10,7 @@ function createThumbnails() {
         //     document.getElementById("gallery").append(document.createElement('br'));
         // }
         artworkCount++;
-        let newThumbnail = document.createElement('button');
+        let newThumbnail = document.createElement('input');
         let currentNum = Math.floor(Math.random() * artists.length);
         let currentArtist = artists[currentNum];
         newThumbnail.type = "submit";

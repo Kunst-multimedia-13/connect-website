@@ -10,23 +10,23 @@
     <script src="scripts.js" id="script"></script>
 </head>
 
-<body class="background-image">
+<body>
     <header>
         <nav class="navbar">
             <ul class="menu body_large">
                 <li>
                     <a href="./index.html">
-                        <h6 class="selected_nav">Home</h6>
+                        <h6 class="selected_nav">Startseite</h6>
                     </a>
                 </li>
                 <li>
                     <a href="./about_us.html">
-                        <h6>About us</h6>
+                        <h6>Über uns</h6>
                     </a>
                 </li>
                 <li>
                     <a href="./contact.html">
-                        <h6>Contact</h6>
+                        <h6>Kontakt</h6>
                     </a>
                 </li>
             </ul>
@@ -39,31 +39,38 @@
         </div>
         <div class="text-div-right" id="info-block">
             <div style="padding-left: 6vw">
-                <h4 class="">15.07.2022 - 17.07.2022</h4>
+                <h6 class="height spacing_24" style="color: var(--primary);">kunst und multimedia ausstellung</h6>
+                <h4 style="color: var(--black)">15.07.2022 - 17.07.2022</h4>
+                <div class="spacing_16"></div>
                 <a href="https://kunstlabor.org/" class="body_standard" style="font-weight: bold; text-decoration: underline" target="_blank">KUNSTLABOR MUNICH</a>
+                <div class="spacing_8"></div>
                 <p class="body_standard">Dachauer Str. 90, 80335 Munich</p>
-                <button onclick="location.href = './contact.html'" type="button" class="btn_primary btn_l">Support us</button>
+                <div class="spacing_32"></div>
+                <button onclick="location.href = './contact.html'" type="button" class="btn_primary btn_l">Unterstütze uns</button>
             </div>
             <div class="spacing_64"></div>
         </div>
 
+        <div class="spacing_48"></div>
+        <h1>Unsere Projekte</h1>
         <form class="masonry" id="gallery" action="artwork.php" request="GET"></form>
 
         <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
     </section>
     <div class="spacing_64"></div>
-    <footer class="main-footer" style="background-color: var(--secondary-shade2); z-index: 0">
+    <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
         <div class="footer-content">
-            <h3 style="height: 45px">contact us</h3>
+            <div class="spacing_48"></div>
+            <h3 style="height: 45px">Kontakt</h3>
+            <div class="spacing_32"></div>
             <h6 class="height" style="color: var(--primary)">email</h6>
-            <p class="body_large" style="height: 0px">connect_art@lrz.uni-muenchen.de</p>
-            <div id="privacy-policy_terms-of-service" class="btn_l">
-                <a href="privacy-policy.html">privacy policy</a>
-
-
-                <p class="caption">copyright © 2022 con:nect</p>
-                <div class="spacing_48"></div>
-            </div>
+            <div class="spacing_10"></div>
+            <p class="body_large">connect_art@lrz.uni-muenchen.de</p>
+            <div class="spacing_24"></div>
+            <a href="privacy-policy.html" class="body_standard" style="font-weight: bold; text-decoration: underline">Datenschutzbestimmung</a>
+            <div class="spacing_16"></div>
+            <p class="caption">copyright © 2022 con:nect</p>
+            <div class="spacing_16"></div>
             <div class="LMU_Logo"><img src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" /></div>
     </footer>
 </body>
