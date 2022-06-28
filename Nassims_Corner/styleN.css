@@ -44,6 +44,18 @@ header>* {
     grid-column: col-start / span 12;
 }
 
+.masonry {
+    /* column-width: calc(33vw - 16.7vw + 24px); */
+    column-count: 5;
+    column-gap: 1em;
+}
+
+.masonry .galleryImage {
+    width: 100%;
+    height: auto;
+    padding: 0.4em 0em;
+}
+
 
 /** On Desktop + Tablet **/
 
@@ -51,8 +63,12 @@ header>* {
     .content,
     .main-header,
     .footer-content,
-    header {
+    /* header {
         grid-column: col-start 2 / span 10;
+    } */
+    header {
+        /* grid-column: col-start 2 / span 10; */
+        padding: 16px;
     }
     .logo-div {
         grid-column: col-start 3 / span 3;
@@ -85,6 +101,11 @@ header>* {
     .header-img {
         grid-column: col-start / span 12;
     }
+    .masonry {
+        /* column-width: calc(33vw - 16.7vw + 24px); */
+        column-count: 2;
+        column-gap: 1em;
+    }
 }
 
 
@@ -100,8 +121,9 @@ header>* {
     .div-left-1of3,
     .div-mid-2of3,
     .div-right-3of3,
-    .pic-div, .header-img, .carousel
-    {
+    .pic-div,
+    .header-img,
+    .carousel {
         grid-column: col-start 1 / span 8;
     }
     .text-div,
@@ -173,8 +195,17 @@ header>* {
 
 /*--------------------------------------------------------- Paragraph & Font Styles ---------------------------------------------------------*/
 
+
 /* Remove webkit margins */
-h1, h2, h3, h4, h5, h6, p, a {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
     margin: 12px;
 }
 
@@ -354,6 +385,7 @@ a:visited {
     padding: 5%;
 }
 
+
 /* Different opacity for german and english text */
 
 .textEN {
@@ -467,7 +499,9 @@ ul {
     float: right;
 }
 
+
 /** Project pages **/
+
 .pers_social_icon {
     padding-right: 12px;
     margin: 0px;
@@ -477,13 +511,12 @@ ul {
 
 .icon_tooltip {
     visibility: hidden;
-    width:120px;
+    width: 120px;
     background-color: var(--grey);
     color: var(--black);
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-
     /** position tooltip **/
     top: 100%;
     left: 50%;
@@ -498,6 +531,7 @@ ul {
     display: block;
     height: 500px;
 }
+
 
 /*--------------------------------------------------------- Spacing ---------------------------------------------------------*/
 
