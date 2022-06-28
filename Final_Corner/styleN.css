@@ -65,10 +65,37 @@ header>* {
     border: 0;
     /* display: block; */
     margin-top: 2%;
+    transition: 1s;
     /* height: _the_image_height;
     width: _the_image_width; */
+    font-family: "degular-display", "Verdana", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
 }
 
+.galleryImage button {
+    
+}
+
+/*
+.galleryImage:hover {
+    color: var(--white);
+
+    // Text styling 
+        font-family: "degular-display", "Verdana", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.5px;
+}
+*/
 
 /** On Desktop + Tablet **/
 
@@ -259,7 +286,7 @@ h3 {
 }
 
 h4 {
-    font-family: "Inter", "Verdana", sans-serif;
+    font-family: "degular-display", "Verdana", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
