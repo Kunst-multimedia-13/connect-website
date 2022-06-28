@@ -49,14 +49,17 @@ header>* {
 
 .masonry {
     /* column-width: calc(33vw - 16.7vw + 24px); */
-    column-count: 5;
+    column-count: 7;
     column-gap: 1em;
 }
 
 .masonry .galleryImage {
     width: 100%;
     height: auto;
-    padding: 0.4em 0em;
+    background-color: none;
+    padding: 0.5em 0em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 
@@ -330,12 +333,21 @@ a:visited {
     text-transform: uppercase;
 }
 
-.background-image {
-    background-image: url(assets/rectangle_2.jpg);
+
+/* .background-image {
+    background-image: url(assets/rectangle_2.svg);
     background-repeat: no-repeat;
     background-position-x: 102%;
     background-position-y: 0%;
     background-size: auto;
+} */
+
+.background-image-beige {
+    background-image: url(assets/background_2.svg);
+    background-repeat: no-repeat;
+    background-position-x: 5%;
+    background-position-y: 55%;
+    background-size: 100%;
 }
 
 .content {
