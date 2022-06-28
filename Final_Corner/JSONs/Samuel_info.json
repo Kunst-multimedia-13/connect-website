@@ -12,19 +12,19 @@
     "videos-altTexts-english": ["prototype may 2021"],
     "email": "sambrookmanamissah@gmail.com",
     "socials": [
-        {"website": ""},
-        {"instagram": ""},
-        {"linkedin": ""},
-        {"behance": ""},
-        {"artstation": "https://www.artstation.com/samba"},
-        {"dribbble": ""},
-        {"facebook": ""},
-        {"tiktok": ""},
-        {"pinterest": ""},
-        {"twitter": "https://twitter.com/SamuelBrookman"},
-        {"youtube": ""},
-        {"soundcloud": ""},
-        {"tumblr": ""},
-        {"github": ""}
+        { "website": "" },
+        { "instagram": "" },
+        { "linkedin": "" },
+        { "behance": "" },
+        { "artstation": "https://www.artstation.com/samba" },
+        { "dribbble": "" },
+        { "facebook": "" },
+        { "tiktok": "" },
+        { "pinterest": "" },
+        { "twitter": "https://twitter.com/SamuelBrookman" },
+        { "youtube": "" },
+        { "soundcloud": "" },
+        { "tumblr": "" },
+        { "github": "" }
     ]
 }
