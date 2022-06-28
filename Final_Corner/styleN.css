@@ -157,19 +157,20 @@ header>* {
     .footer-content,
     header,
     .text-div-right,
+    .pic-div {
+        grid-column: col-start 2 / span 10;
+    }
     .div-left-1of2,
     .div-right-2of2,
     .div-left-1of3,
     .div-mid-2of3,
     .div-right-3of3,
-    .pic-div,
-    .header-img,
     .carousel {
-        grid-column: col-start 2 / span 10;
+        grid-column: col-start 1 / span 11;
     }
-
     .text-div,
-    .pic-div {
+    .pic-div,
+    .header-img {
         grid-column: col-start / span 11;
     }
 
@@ -257,6 +258,7 @@ h6,
 p,
 a {
     margin: 0px;
+    overflow-wrap: anywhere;
 }
 
 h1 {

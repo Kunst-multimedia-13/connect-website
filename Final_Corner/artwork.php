@@ -46,13 +46,13 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             <nav class="navbar">
                 <ul class="menu body_large">
                     <li><a href="./index.html">
-                            <h6>Home</h6>
+                            <h6>Startseite</h6>
                         </a></li>
                     <li><a href="./about_us.html">
-                            <h6>About us</h6>
+                            <h6>Über uns</h6>
                         </a></li>
                     <li><a href="./contact.html">
-                            <h6>Contact</h6>
+                            <h6>Kontakt</h6>
                         </a></li>
                 </ul>
             </nav>
@@ -194,7 +194,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             echo "<div class='spacing_64'></div>";
 
             # VIDEO GALLERY
-            echo "<div style='display:flex; justify-content: space-around;'>";
+            echo "<div style='display:flex; flex-wrap: wrap; justify-content: space-around;'>";
             $key = "videos-links";
             $currentVideo = 1;
             while (file_exists("media/" . $artist . "_video_" . $currentVideo . ".mp4")) {
@@ -211,22 +211,20 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         </section>
 
         <div class="spacing_64"></div>
-        <footer class="main-footer" style="background-color: var(--secondary-shade2); z-index: 0">
+        <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
             <div class="footer-content">
-                <h1 style="height: 85px">contact us</h1>
-                <h6 class="height" style="color: var(--secondary-shade1)">email</h6>
+                <div class="spacing_48"></div>
+                <h3 style="height: 45px">Kontakt</h3>
+                <div class="spacing_32"></div>
+                <h6 class="height" style="color: var(--primary)">email</h6>
+                <div class="spacing_10"></div>
                 <p class="body_large">connect_art@lrz.uni-muenchen.de</p>
-                <div id="privacy-policy_terms-of-service" class="btn_l">
-                    <a href="privacy-policy.html">privacy policy</a>
-                    <img src="https://cdn.glitch.global/cd1845f1-7885-4da2-ad8b-cd3882b8f972/Connect_Logo_LMU_Big.svg?v=1652605879344" alt="LMU logo" />
-
-                </div>
-                <p class="caption">
-                    copyright © 2022 con:nect
-                </p>
-                <div class="spacing_48">
-                </div>
-            </div>
+                <div class="spacing_24"></div>
+                <a href="privacy-policy.html" class="body_standard" style="font-weight: bold; text-decoration: underline">Datenschutzbestimmung</a>
+                <div class="spacing_16"></div>
+                <p class="caption">copyright © 2022 con:nect</p>
+                <div class="spacing_16"></div>
+                <div class="LMU_Logo"><img src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" /></div>
         </footer>
     </body>
 <?php
