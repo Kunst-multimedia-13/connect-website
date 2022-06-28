@@ -83,7 +83,7 @@ header>* {
     }
     .text-div-right {
         grid-column: col-start 5 / span 8;
-        background-color: var(--secondary);
+        background-color: var(--secondary-beige);
     }
     .div-left-1of2 {
         grid-column: col-start 1 / span 5;
@@ -137,7 +137,7 @@ header>* {
     }
     .text-div-right {
         grid-column: col-start 2 / span 11;
-        background-color: var(--secondary);
+        background-color: var(--secondary-beige);
     }
     .logo-large {
         max-width: 100%;
@@ -436,15 +436,15 @@ button {
 }
 
 .btn_primary:hover {
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--secondary-beige);
     background-color: var(--white);
     color: var(--primary);
 }
 
 .btn_secondary:hover {
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--secondary-beige);
     background-color: var(--white);
-    color: var(--secondary);
+    color: var(--secondary-beige);
 }
 
 
