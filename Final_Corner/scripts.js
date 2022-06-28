@@ -4,21 +4,24 @@ var artists = artistsBackup.slice();
 function createThumbnails() {
     let artworkCount = 0;
     while (artists.length > 0) {
-        if (artworkCount % 5 == 0) {
-            document.getElementById("gallery").append(document.createElement('br'));
-        }
+        // if (artworkCount % 5 == 0) {
+        //     document.getElementById("gallery").append(document.createElement('br'));
+        // }
         artworkCount++;
         let newThumbnail = document.createElement('input');
         let currentArtist = artists[Math.floor(Math.random() * artists.length)];
         newThumbnail.type = "submit";
+        newThumbnail.className = "galleryImage";
         newThumbnail.value = currentArtist;
         newThumbnail.name = "artist";
+
         //newThumbnail.setAttribute('class', 'galleryImage');
-        tempImage = document.createElement('img');
-        tempImage.src = "ArtworkPreviews/Artist=PP " + currentArtist + ".jpg";
-        document.append(tempImage);
+        // tempImage = document.createElement('img');
+        // tempImage.src = "ArtworkPreviews/Artist=PP " + currentArtist + ".jpg";
+        // document.append(tempImage);
+        // document.getImage
+
         newThumbnail.style = "background-image: url('ArtworkPreviews/Artist=PP " + currentArtist + ".jpg');";
-        newThumbnail.className = "galleryImage";
         document.getElementById("gallery").append(newThumbnail);
         artists = artists.filter((artist) => { return artist != currentArtist });
     }

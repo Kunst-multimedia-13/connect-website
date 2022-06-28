@@ -13,7 +13,6 @@
     --secondary-shade1: #efe9e4;
     **/
     --secondary-shade2: #efe9e4;
-    
     --white: #ffffff;
     --border: #eaeaea;
     --nav-circle: 8px;
@@ -21,6 +20,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
 }
 
 
@@ -53,12 +56,17 @@ header>* {
 
 .masonry .galleryImage {
     width: 100%;
-    height: auto;
+    height: 100px;
     padding: 0.4em 0em;
     background-position: center;
     background-size: cover;
     border-style: none;
     color: rgba(0, 0, 0, 0);
+    border: 0;
+    /* display: block; */
+    margin-top: 2%;
+    /* height: _the_image_height;
+    width: _the_image_width; */
 }
 
 
@@ -106,11 +114,11 @@ header>* {
     .header-img {
         grid-column: col-start / span 12;
     }
-    .masonry {
-        /* column-width: calc(33vw - 16.7vw + 24px); */
+    /* .masonry {
+        column-width: calc(33vw - 16.7vw + 24px);
         column-count: 2;
         column-gap: 1em;
-    }
+    } */
 }
 
 
@@ -373,16 +381,16 @@ a:visited {
     text-transform: uppercase;
 }
 
+.content {
+    background-color: none;
+}
+
 .background-image {
     background-image: url(assets/rectangle_2.svg);
     background-repeat: no-repeat;
     background-position-x: 102%;
     background-position-y: 0%;
     background-size: auto;
-}
-
-.content {
-    background-color: none;
 }
 
 .logo-large {
