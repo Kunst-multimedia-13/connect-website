@@ -60,9 +60,8 @@
       $artistFullNameBackup = ["Angela Denninger", "Anna Lena Welter", "Elisabeth Frank", "Elisabeth Elmauer", "Julia Cox", "Julia Prottengeier", "Juliana Gutiérrez Wiest", "Laura Hollmann", "Laura Mayr", "Leslie Scholl", "Magdalena Ammer", "Nassim Chamseddine", "Nataliia Daliba", "Raffaela Kammer", "Ricarda Jocher", "Samuel Brookman-Amissah", "Sandra Kienle", "Diep-Thao Pham", "Theresa Zimmermann", "Tobias Biber", "Yunuo Zhang"];
       shuffle($artists);
       foreach ($artists as $artist) {
-        echo "<p>" . var_dump(getimagesize("ArtworkPreviews/Artist=PP " . $artist . ".jpg")[3]) . "</p>";
       ?>
-        <input class="galleryImage" type="submit" name="artist" value="<?php echo $artist; ?>" style="background-image: url('ArtworkPreviews/Artist=PP <?php echo $artist . ".jpg'); " . str_replace('"', "", str_replace(" ", "; ", getimagesize("ArtworkPreviews/Artist=PP " . $artist . ".jpg")[3])); ?> "></input>
+        <input class="galleryImage" type="submit" name="artist" value="<?php echo $artist; ?>" style="background-image: url('ArtworkPreviews/Artist=PP <?php echo $artist . ".jpg'); " . str_replace("=", ":", str_replace('"', "", str_replace(" ", "px; ", getimagesize("ArtworkPreviews/Artist=PP " . $artist . ".jpg")[3]))) ?>px"></input>
       <?php
       }
       ?>
