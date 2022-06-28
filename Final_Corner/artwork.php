@@ -46,7 +46,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             <nav class="navbar">
                 <ul class="menu body_large">
                     <li><a href="./index.html">
-                            <h6 class="selected_nav">Home</h6>
+                            <h6>Home</h6>
                         </a></li>
                     <li><a href="./about_us.html">
                             <h6>About us</h6>
