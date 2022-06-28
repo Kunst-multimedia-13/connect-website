@@ -63,6 +63,20 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             # HEADER IMAGE
             if (file_exists("media/" . $artist . "_header.jpg")) createImg("header-img", "header-img", "header", "Kopfzeilenbild", "header image");
 
+            # TAGS
+            $key = "tags";
+            $totalTags = 3;
+            if (isset($json->$key) && $json->$key != "") {
+                echo "<h6 class='body_large' style='color: var(--secondary-shade1)'>";
+                for ($currentTag = 0; $currentTag < $totalTags; $currentTag++) {
+                    echo $json->$key[$currentTag];
+                    if ($currentTag < 2) {
+                        echo "    •    ";
+                    }
+                }
+                echo "</h6>";
+            }
+
             # ARTIST NAME
             $key = "artist-name";
             if (isset($json->$key) && $json->$key != "") echo "<h5 id='artist-name' style='color:var(--primary)'>" . $json->$key, "</h5>";
@@ -165,8 +179,8 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             # IMAGE GALLERY
             $currentArtwork = 1;
             if (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
-                ?>
-                <div class=>...... 
+            ?>
+                <div class='carousel' data-flickity='{ "autoPlay": true, "wrapAround": true }'>
                 <?php
                 while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
                     // if ($currentArtwork % 3 == 0) echo "<br />";
@@ -193,7 +207,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                 $currentVideo++;
             }
             echo "</div>";
-            ?>
+                ?>
         </section>
 
         <div class="spacing_64"></div>
