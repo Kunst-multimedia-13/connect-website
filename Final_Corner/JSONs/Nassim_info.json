@@ -12,9 +12,9 @@
     "videos-altTexts-english": [""],
     "email": "",
     "socials": [
-        { "website": "" },
-        { "instagram": "" },
-        { "linkedin": "" },
+        { "website": "http://nchamseddine.com/" },
+        { "instagram": "https://www.instagram.com/nasumi_ch/" },
+        { "linkedin": "https://www.linkedin.com/in/nassim-chamseddine-a57214154/" },
         { "behance": "" },
         { "artstation": "" },
         { "dribbble": "" },
@@ -25,6 +25,6 @@
         { "youtube": "" },
         { "soundcloud": "" },
         { "tumblr": "" },
-        { "github": "" }
+        { "github": "https://github.com/Nassim-Ch" }
     ]
 }

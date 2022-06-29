@@ -13,7 +13,7 @@
     "email": "",
     "socials": [
         { "website": "" },
-        { "instagram": "" },
+        { "instagram": "https://www.instagram.com/magdaamm/" },
         { "linkedin": "" },
         { "behance": "" },
         { "artstation": "" },
@@ -24,7 +24,7 @@
         { "twitter": "" },
         { "youtube": "" },
         { "soundcloud": "" },
-        { "tumblr": "" },
+        { "tumblr": "https://www.tumblr.com/blog/magdaamm" },
         { "github": "" }
     ]
 }

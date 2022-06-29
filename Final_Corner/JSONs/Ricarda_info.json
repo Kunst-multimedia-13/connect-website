@@ -13,8 +13,8 @@
     "email": "",
     "socials": [
         { "website": "" },
-        { "instagram": "" },
-        { "linkedin": "" },
+        { "instagram": "https://www.instagram.com/ricardamarai/" },
+        { "linkedin": "https://www.linkedin.com/in/ricarda-j-ab1871209/" },
         { "behance": "" },
         { "artstation": "" },
         { "dribbble": "" },
@@ -23,7 +23,7 @@
         { "pinterest": "" },
         { "twitter": "" },
         { "youtube": "" },
-        { "soundcloud": "" },
+        { "soundcloud": "https://soundcloud.com/ricardamarai" },
         { "tumblr": "" },
         { "github": "" }
     ]

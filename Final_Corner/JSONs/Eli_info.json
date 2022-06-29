@@ -13,18 +13,18 @@
     "email": "",
     "socials": [
         { "website": "" },
-        { "instagram": "" },
+        { "instagram": "https://www.instagram.com/elithequeenbee/" },
         { "linkedin": "" },
         { "behance": "" },
         { "artstation": "" },
         { "dribbble": "" },
         { "facebook": "" },
-        { "tiktok": "" },
+        { "tiktok": "https://www.tiktok.com/@elithequeenbee" },
         { "pinterest": "" },
         { "twitter": "" },
-        { "youtube": "" },
+        { "youtube": "https://www.youtube.com/channel/UCbiwnMTGLv6HTgRDP79pk9A" },
         { "soundcloud": "" },
-        { "tumblr": "" },
+        { "tumblr": "https://elithequeenbee.tumblr.com/" },
         { "github": "" }
     ]
 }
