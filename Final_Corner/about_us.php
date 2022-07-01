@@ -7,7 +7,6 @@
   <title>con:nect</title>
   <link rel="stylesheet" href="style.css" />
   <link id="favicon" rel="icon" href="assets/Connect_Illus_Dots.svg" type="image/svg" />
-  <script src="scripts.js" id="script"></script>
 
   <style>
     .spender {
@@ -51,13 +50,39 @@
   </header>
   <section class="content">
     <!-- Über uns -->
-    <div class="text-div">
+    <div class="div-left-1of2">
       <h1>Wer wir sind</h1>
+      <p class="body_standard">So wie es zwischen Seele und Körper eine Verbindung gibt, ist auch der Körper mit seiner Umgebung verbunden.“ – Khalil Gibran<br />Alles was wir in unserem Leben denken, tun und wollen, verbindet sich. Eindrücke, Personen, Gegenstände und viele weitere alltägliche Dinge verknüpfen wir miteinander. Es entsteht Neues – Kontakte, Erzeugnisse oder Erlebnisse. Alles Neue kann sich als schlecht oder als gut erweisen. Folglich versuchen wir die Verbindung entweder zu halten oder zu lösen. Es baut sich Stück für Stück ein großes Netzwerk aus, welches letztendlich unsere Identität beschreibt.</p>
+    </div>
+    <div class="div-right-2of2">
+      <h1 class="textEN">Who we are</h1>
+      <p class="body_standard textEN">"Just as there is a connection between the soul and the body, the body is also connected to its environment." - Khalil Gibran Everything we think, do and want in our lives connects. We connect impressions, people, objects and many other everyday things. New things are created - contacts, products or experiences. Everything new can turn out to be bad or good. Consequently, we either try to keep the connection or to break it. Piece by piece, a large network is built up, which ultimately describes our identity.</p>
     </div>
 
+
+    <form class="gallery" action="artwork.php" request="GET">
+      <?php
+      $artists = ["Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Theresa", "Tobias", "Yunuo"];
+      //shuffle($artists);
+      foreach ($artists as $artist) {
+      ?>
+        <button class="galleryImage" type="submit" name="artist" value="<?php echo $artist ?>"><img class="galleryImage" src="media/<?php echo $artist . "_portrait.jpg" ?>"></button>
+      <?php
+      }
+      ?>
+    </form>
+
+    <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+    <!-- Danksagung -->
+    <div class="div-left-1of2">
+      <h1>Danksagung</h1>
+      <p class="body_standard">Wir möchten uns herzlich bei Bashira Cabbara für ihre Betreuung und Hilfe bei der Vorbereitung unserer Ausstellung bedanken. Ein besonderes Dankeschön gilt unserer Studiengangsleiterin Dr. Karin Guminski, die uns im Laufe unseres Studiums immer unterstützt und beraten hat, sowie Dr. Daniel Botz, Rico Sperl und Prof. Heinrich Hußmann. Außerdem danken wir dem Kunstlabor 2 für die Bereitstellung der Räumlichkeiten. Wir danken auch unseren Freunden, Familien und allen weiteren Unterstützenden. Insbesondere gilt unser Dank den Spendengebern, deren finanzielle Unterstützung die Ausstellung erst möglich gemacht hat.</p>
+    </div>
+    <div class="div-right-2of2">
+      <h1 class="textEN">Note of thanks</h1>
+      <p class="body_standard textEN">We would like to express our sincere thanks to Bashira Cabbara for her supervision and help in preparing our exhibition. A special thank you goes to our course director Dr. Karin Guminski, who always supported and advised us during our studies, as well as Dr. Daniel Botz, Rico Sperl and Prof. Heinrich Hußmann. In addition, we would like to thank the Kunstlabor 2 for providing the space. We also thank our friends, families and all other supporters. In particular, we would like to thank the donors whose financial support made the exhibition possible in the first place.</p>
+    </div>
     <!-- Spender -->
-    <h1>Danksagung</h1>
-    <p class="body_large text-div">Wir möchten uns herzlich bei Bashira Cabbara für ihre Betreuung und Hilfe bei der Vorbereitung unserer Ausstellung bedanken. Ein besonderes Dankeschön gilt unserer Studiengangsleiterin Dr. Karin Guminski, die uns im Laufe unseres Studiums immer unterstützt und beraten hat, sowie Dr. Daniel Botz, Rico Sperl und Prof. Heinrich Hußmann. Außerdem danken wir dem Kunstlabor 2 für die Bereitstellung der Räumlichkeiten. Wir danken auch unseren Freunden, Familien und allen weiteren Unterstützenden. Insbesondere gilt unser Dank den Spendengebern, deren finanzielle Unterstützung die Ausstellung erst möglich gemacht hat.</p>
     <span class="spender">
       <img src="assets/spender/lfa.png">
       <img src="assets/spender/interpage.png">
@@ -67,7 +92,6 @@
       <img src="assets/spender/boesner.png">
     </span>
 
-    <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
   </section>
   <div class="spacing_64"></div>
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">

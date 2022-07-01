@@ -51,13 +51,18 @@ header>* {
     column-gap: 1em;
 }
 
-.masonry .galleryImage {
+.gallery {
+    column-count: 7;
+    column-gap: 1em;
+}
+
+.galleryImage {
     height: auto;
     width: 100%;
     border-style: none;
     color: rgba(0, 0, 0, 0);
     border: 0;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     margin-bottom: 5%;
     transition: 1s;
     font-family: "degular-display", "Verdana", sans-serif;
@@ -155,6 +160,7 @@ header>* {
     .pic-div {
         grid-column: col-start 2 / span 10;
     }
+
     .div-left-1of2,
     .div-right-2of2,
     .div-left-1of3,
@@ -163,6 +169,7 @@ header>* {
     .carousel {
         grid-column: col-start 1 / span 11;
     }
+
     .text-div,
     .pic-div,
     .header-img {

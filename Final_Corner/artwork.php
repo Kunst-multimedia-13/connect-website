@@ -123,10 +123,10 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             # ARTIST DESCRIPTION TITLE GERMAN
             $key = "artist-description-german";
             if (isset($json->$key) && $json->$key != "") {
-                if ($artist == ("Tobias" || "Samuel")) echo "<" . $titlePrimary . ">Zum Künstler</" . $titlePrimary . ">";
+                if ($artist == "Tobias" ||$artist == "Samuel") echo "<" . $titlePrimary . ">Zum Künstler</" . $titlePrimary . ">";
                 else echo "<" . $titlePrimary . ">Zur Künstlerin</" . $titlePrimary . ">";
             } elseif (file_exists("media/" . $artist . "_portrait.jpg")) {
-                if ($artist == ("Tobias" || "Samuel")) echo "<" . $titlePrimary . ">Der Künstler</" . $titlePrimary . ">";
+                if ($artist == "Tobias" ||$artist == "Samuel") echo "<" . $titlePrimary . ">Der Künstler</" . $titlePrimary . ">";
                 else echo "<" . $titlePrimary . ">Die Künstlerin</" . $titlePrimary . ">";
             }
 
