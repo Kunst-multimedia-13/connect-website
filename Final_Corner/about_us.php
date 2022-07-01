@@ -59,14 +59,22 @@
       <p class="body_standard textEN">"Just as there is a connection between the soul and the body, the body is also connected to its environment." - Khalil Gibran Everything we think, do and want in our lives connects. We connect impressions, people, objects and many other everyday things. New things are created - contacts, products or experiences. Everything new can turn out to be bad or good. Consequently, we either try to keep the connection or to break it. Piece by piece, a large network is built up, which ultimately describes our identity.</p>
     </div>
 
-
     <form class="gallery" action="artwork.php" request="GET">
       <?php
       $artists = ["Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Theresa", "Tobias", "Yunuo"];
+      $artistFullName = ["Angela Denninger", "Anna Lena Welter", "Elisabeth Frank", "Elisabeth Elmauer", "Julia Cox", "Julia Prottengeier", "Juliana Gutiérrez Wiest", "Laura Hollmann", "Laura Mayr", "Leslie Scholl", "Magdalena Ammer", "Nassim Chamseddine", "Nataliia Daliba", "Raffaela Kammer", "Ricarda Jocher", "Samuel Brookman-Amissah", "Sandra Kienle", "Diep-Thao Pham", "Theresa Zimmermann", "Tobias Biber", "Yunuo Zhang"];
+      $projects = ["Mirror", "Fassadengeschichten", "E-WEAR", "An Extract of Japanese Art and Culture", "Illumina", "Tinted moment", "ES-CULTURA", "In All Honesty", "Yokai Hunt", "Wild Skies", "Drawn to Life", "aura", "Milk, Lilusch und Twinkleinsel", "Concientia", "Sound is Touching", "D1V1NE: Championship", "YourSide", "ιδέα", "Wandel", "Hermit", "#Human Emotions"];
+
       //shuffle($artists);
-      foreach ($artists as $artist) {
+      foreach ($artists as $index => $artist) {
       ?>
-        <button class="galleryImage" type="submit" name="artist" value="<?php echo $artist ?>"><img class="galleryImage" src="media/<?php echo $artist . "_portrait.jpg" ?>"></button>
+        <button class="galleryImage" type="submit" name="artist" value="<?php echo $artist ?>"><img class="galleryImage" src="media/<?php echo $artist . "_portrait.jpg" ?>">
+          <div class="overlay">
+            <h6><?php echo $artistFullName[$index] ?></h6>
+            <div class="spacing_8"></div>
+            <p class="body_standard"><?php echo $projects[$index] ?></p>
+          </div>
+        </button>
       <?php
       }
       ?>
