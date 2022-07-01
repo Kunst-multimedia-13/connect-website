@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="styleN.css" />
     <link id="favicon" rel="icon" href="assets/Connect_Illus_Dots.svg" type="image/svg" />
     <script src="scripts.js" id="script"></script>
+
+    <style>
+        .spender {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            align-items: center;
+        }
+
+        .spender > * {
+            padding-right: 42px;
+            width: 15vw;
+            min-width: 50px;
+            max-width: 150px;
+        }
+    </style>
 </head>
 
 <body class="background-image">
@@ -33,8 +50,23 @@
         </nav>
     </header>
     <section class="content">
-        <h1>Über uns</h1>
-        <p class="body_large">Mehr Informationen zu uns in Kürze</p>
+        <!-- Über uns -->
+        <div class="text-div">
+            <h1>Wer wir sind</h1>
+        </div>
+
+        <!-- Spender -->
+        <h1>Danksagung</h1>
+        <p class="body_large text-div">Wir möchten uns herzlich bei Bashira Cabbara für ihre Betreuung und Hilfe bei der Vorbereitung unserer Ausstellung bedanken. Ein besonderes Dankeschön gilt unserer Studiengangsleiterin Dr. Karin Guminski, die uns im Laufe unseres Studiums immer unterstützt und beraten hat, sowie Dr. Daniel Botz, Rico Sperl und Prof. Heinrich Hußmann. Außerdem danken wir dem Kunstlabor 2 für die Bereitstellung der Räumlichkeiten. Wir danken auch unseren Freunden, Familien und allen weiteren Unterstützenden. Insbesondere gilt unser Dank den Spendengebern, deren finanzielle Unterstützung die Ausstellung erst möglich gemacht hat.</p>
+        <span class="spender">
+            <img src="assets/spender/lfa.png">
+            <img src="assets/spender/interpage.png">
+            <img src="assets/spender/euraneg.png">
+            <img src="assets/spender/davero.png">
+            <img src="assets/spender/xrhub.png">
+            <img src="assets/spender/boesner.png">
+        </span>
+
         <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
     </section>
     <div class="spacing_64"></div>
