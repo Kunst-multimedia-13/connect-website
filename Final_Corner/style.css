@@ -74,21 +74,24 @@ header>* {
     align-items: center;
 }
 
-/*
-.galleryImage:hover {
-    color: var(--white);
-
-    // Text styling 
-        font-family: "degular-display", "Verdana", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.5px;
+.overlay {
+    text-align: left;
+    padding: 5px;
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    object-fit: cover;
+    opacity: 0;
+    background-color: var(--secondary-beige);
+    color: var(--black);
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
 }
-*/
+
+.galleryImage:hover .overlay {
+    opacity: 1;
+    z-index: 2;
+}
 
 /** On Desktop + Tablet **/
 @media (min-width: 767px) {
