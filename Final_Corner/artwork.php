@@ -33,7 +33,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>con:nect</title>
-        <link rel="stylesheet" href="styleN.css" />
+        <link rel="stylesheet" href="style.css" />
         <link id="favicon" rel="icon" href="https://cdn.glitch.global/cd1845f1-7885-4da2-ad8b-cd3882b8f972/Connect_Illus_Dots.svg?v=1652605879062" type="image/svg">
 
         <!-- Picture carousel by flickity -->
@@ -45,7 +45,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
         <header>
             <nav class="navbar">
                 <ul class="menu body_large">
-                    <li><a href="./index.html">
+                    <li><a href="./index.php">
                             <h6>Startseite</h6>
                         </a></li>
                     <li><a href="./about_us.html">
@@ -183,7 +183,6 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                 <div class='carousel' data-flickity='{ "autoPlay": true, "wrapAround": true }'>
                 <?php
                 while (file_exists("media/" . $artist . "_artwork_" . $currentArtwork . ".jpg")) {
-                    // if ($currentArtwork % 3 == 0) echo "<br />";
                     createImg("artwork-" . $currentArtwork, "carousel_cell", "artwork_" . $currentArtwork, returnArrayValue("images-altTexts-german", $currentArtwork - 1, "Galeriebild" . $currentArtwork), returnArrayValue("images-altTexts-english", $currentArtwork - 1, "gallery image" . $currentArtwork));
                     $currentArtwork++;
                 }
