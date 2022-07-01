@@ -15,17 +15,17 @@
       <ul class="menu body_large">
         <li>
           <a href="./index.php">
-            <h6 class="selected_nav">Startseite</h6>
+            <h6 class="selected_nav">Home</h6>
           </a>
         </li>
         <li>
           <a href="./about_us.php">
-            <h6>Über uns</h6>
+            <h6>About us</h6>
           </a>
         </li>
         <li>
           <a href="./contact.html">
-            <h6>Kontakt</h6>
+            <h6>Contact</h6>
           </a>
         </li>
       </ul>
@@ -38,16 +38,17 @@
     </div>
     <div class="text-div-right" id="info-block">
       <div style="padding-left: 6vw">
-        <h6 class="height spacing_24" style="color: var(--primary);">kunst und multimedia ausstellung</h6>
+        <h6 class="height spacing_24" style="color: var(--primary);">multimedia art exhibition</h6>
         <h4 style="color: var(--black)">15.07.2022 - 17.07.2022</h4>
         <div class="spacing_16"></div>
-        <a href="https://kunstlabor.org/" class="body_standard" style="font-weight: bold; text-decoration: underline" target="_blank">KUNSTLABOR MUNICH</a>
+        <a href="https://kunstlabor.org/" class="body_standard" style="font-weight: bold; text-decoration: underline" target="_blank">KUNSTLABOR 2 MUNICH</a>
         <div class="spacing_8"></div>
         <p class="body_standard">Dachauer Str. 90, 80335 Munich</p>
         <div class="spacing_32"></div>
-        <h5 style="color: var(--primary)"> Vernissage am Freitag, </br> 15. Juli um 19:00</h5>
+        <h5 style="color: var(--primary)"> Vernissage Freitag / Friday, </br> 15. JUL 19:00 / 7 pm</h5>
         <div class="spacing_32"></div>
-        <button onclick="location.href = './contact.html'" type="button" class="btn_primary btn_l">Unterstütze uns</button>
+        <button onclick="location.href = window.open('https://www.google.com/maps/place/KUNSTLABOR+2+-+Kunst-+%26+Kulturzentrum+M%C3%BCnchen/@48.1509979,11.5583465,17z/data=!3m1!4b1!4m5!3m4!1s0x479e77c129e56ecd:0x8b9d2862218372bc!8m2!3d48.1509979!4d11.5583465')" type="button" class="btn_primary btn_l">Find us</button>
+        <!-- alternative link: https://g.page/kunstlabormunich?share -->
       </div>
       <div class="spacing_64"></div>
     </div>
@@ -82,7 +83,7 @@
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
     <div class="footer-content">
       <div class="spacing_48"></div>
-      <h3 style="height: 45px">Kontakt</h3>
+      <h3 style="height: 45px">Kontakt / Contact</h3>
       <div class="spacing_32"></div>
       <h6 class="height" style="color: var(--primary)">email</h6>
       <div class="spacing_16"></div>
@@ -91,9 +92,9 @@
       <div class="spacing_32"></div>
 
 
-      <h6 class="height" style="color: var(--primary)">Öffnungszeiten</h6>
+      <h6 class="height" style="color: var(--primary)">Öffnungszeiten / Opening hours</h6>
       <div class="spacing_16"></div>
-      <p class="body_large"> Freitag ab 19:00 </br> Samstag 10:00 – 20:00</br> Sonntag 10:00 – 17:00</p>
+      <p class="body_large"> Freitag / Friday 19:00 – 0:00 </br> Samstag / Saturday 10:00 – 20:00</br> Sonntag / Sunday 10:00 – 17:00</p>
 
       <div class="spacing_32"></div>
 

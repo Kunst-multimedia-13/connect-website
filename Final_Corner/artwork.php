@@ -46,13 +46,13 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             <nav class="navbar">
                 <ul class="menu body_large">
                     <li><a href="./index.php">
-                            <h6>Startseite</h6>
+                            <h6>Home</h6>
                         </a></li>
                     <li><a href="./about_us.php">
-                            <h6>Über uns</h6>
+                            <h6>About us</h6>
                         </a></li>
                     <li><a href="./contact.html">
-                            <h6>Kontakt</h6>
+                            <h6>Contact</h6>
                         </a></li>
                 </ul>
             </nav>
@@ -123,10 +123,10 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
             # ARTIST DESCRIPTION TITLE GERMAN
             $key = "artist-description-german";
             if (isset($json->$key) && $json->$key != "") {
-                if ($artist == "Tobias" ||$artist == "Samuel") echo "<" . $titlePrimary . ">Zum Künstler</" . $titlePrimary . ">";
+                if ($artist == "Tobias" || $artist == "Samuel") echo "<" . $titlePrimary . ">Zum Künstler</" . $titlePrimary . ">";
                 else echo "<" . $titlePrimary . ">Zur Künstlerin</" . $titlePrimary . ">";
             } elseif (file_exists("media/" . $artist . "_portrait.jpg")) {
-                if ($artist == "Tobias" ||$artist == "Samuel") echo "<" . $titlePrimary . ">Der Künstler</" . $titlePrimary . ">";
+                if ($artist == "Tobias" || $artist == "Samuel") echo "<" . $titlePrimary . ">Der Künstler</" . $titlePrimary . ">";
                 else echo "<" . $titlePrimary . ">Die Künstlerin</" . $titlePrimary . ">";
             }
 

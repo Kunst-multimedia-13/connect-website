@@ -32,17 +32,17 @@
       <ul class="menu body_large">
         <li>
           <a href="./index.php">
-            <h6>Startseite</h6>
+            <h6>Home</h6>
           </a>
         </li>
         <li>
           <a href="./about_us.php">
-            <h6 class="selected_nav">Über uns</h6>
+            <h6 class="selected_nav">About us</h6>
           </a>
         </li>
         <li>
           <a href="./contact.html">
-            <h6>Kontakt</h6>
+            <h6>Contact</h6>
           </a>
         </li>
       </ul>
@@ -97,7 +97,7 @@
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
     <div class="footer-content">
       <div class="spacing_48"></div>
-      <h3 style="height: 45px">Kontakt</h3>
+      <h3 style="height: 45px">Kontakt / Contact</h3>
       <div class="spacing_32"></div>
       <h6 class="height" style="color: var(--primary)">email</h6>
       <div class="spacing_16"></div>
@@ -106,9 +106,9 @@
       <div class="spacing_32"></div>
 
 
-      <h6 class="height" style="color: var(--primary)">Öffnungszeiten</h6>
+      <h6 class="height" style="color: var(--primary)">Öffnungszeiten / Opening hours</h6>
       <div class="spacing_16"></div>
-      <p class="body_large"> Freitag ab 19:00 </br> Samstag 10:00 – 20:00</br> Sonntag 10:00 – 17:00</p>
+      <p class="body_large"> Freitag / Friday 19:00 – 0:00 </br> Samstag / Saturday 10:00 – 20:00</br> Sonntag / Sunday 10:00 – 17:00</p>
 
       <div class="spacing_32"></div>
 
@@ -127,6 +127,7 @@
       </div>
 
       <div class="spacing_32"></div>
+
 
       <a href="privacy-policy.html" class="body_standard" style="font-weight: bold; text-decoration: underline">Datenschutzbestimmung</a>
       <div class="spacing_16"></div>
