@@ -85,7 +85,7 @@ header>* {
     background-color: var(--secondary-beige);
     color: var(--black);
     cursor: pointer;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .galleryImage:hover .overlay {
