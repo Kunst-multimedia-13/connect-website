@@ -48,7 +48,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                     <li><a href="./index.php">
                             <h6>Startseite</h6>
                         </a></li>
-                    <li><a href="./about_us.html">
+                    <li><a href="./about_us.php">
                             <h6>Über uns</h6>
                         </a></li>
                     <li><a href="./contact.html">

@@ -14,12 +14,12 @@
         <nav class="navbar">
             <ul class="menu body_large">
                 <li>
-                    <a href="./index.html">
+                    <a href="./index.php">
                         <h6 class="selected_nav">Startseite</h6>
                     </a>
                 </li>
                 <li>
-                    <a href="./about_us.html">
+                    <a href="./about_us.php">
                         <h6>Über uns</h6>
                     </a>
                 </li>
@@ -57,7 +57,6 @@
         <form class="masonry" id="gallery" action="artwork.php" request="GET">
             <?php
             $artists = ["Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Theresa", "Tobias", "Yunuo"];
-            $artistFullNameBackup = ["Angela Denninger", "Anna Lena Welter", "Elisabeth Frank", "Elisabeth Elmauer", "Julia Cox", "Julia Prottengeier", "Juliana Gutiérrez Wiest", "Laura Hollmann", "Laura Mayr", "Leslie Scholl", "Magdalena Ammer", "Nassim Chamseddine", "Nataliia Daliba", "Raffaela Kammer", "Ricarda Jocher", "Samuel Brookman-Amissah", "Sandra Kienle", "Diep-Thao Pham", "Theresa Zimmermann", "Tobias Biber", "Yunuo Zhang"];
             //shuffle($artists);
             foreach ($artists as $artist) {
             ?>
