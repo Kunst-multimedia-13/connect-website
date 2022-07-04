@@ -11,7 +11,7 @@
 
 <body class="background-image">
   <header>
-    <nav class="navbar">
+    <nav>
       <ul class="menu body_large">
         <li>
           <a href="./index.php">
@@ -23,18 +23,18 @@
             <h6>About us</h6>
           </a>
         </li>
-        <li>
+        <!--li>
           <a href="./contact.html">
             <h6>Contact</h6>
           </a>
-        </li>
+        </li-->
       </ul>
     </nav>
   </header>
   <section class="content">
     <div class="logo-div">
       <img class="logo-large" src="https://cdn.glitch.global/cd1845f1-7885-4da2-ad8b-cd3882b8f972/Connect_Logo_Main.svg?v=1652605879199" alt="con.nect" />
-      <br />
+      <div class="spacing_24"></div>
     </div>
     <div class="text-div-right" id="info-block">
       <div style="padding-left: 6vw">
@@ -47,29 +47,35 @@
         <div class="spacing_32"></div>
         <h5 style="color: var(--primary)"> Vernissage Freitag / Friday, </br> 15. JUL 19:00 / 7 pm</h5>
         <div class="spacing_32"></div>
-        <button onclick="location.href = window.open('https://www.google.com/maps/place/KUNSTLABOR+2+-+Kunst-+%26+Kulturzentrum+M%C3%BCnchen/@48.1509979,11.5583465,17z/data=!3m1!4b1!4m5!3m4!1s0x479e77c129e56ecd:0x8b9d2862218372bc!8m2!3d48.1509979!4d11.5583465')" type="button" class="btn_primary btn_l">Find us</button>
-        <!-- alternative link: https://g.page/kunstlabormunich?share -->
+        <button onclick="window.open('https://g.page/kunstlabormunich?share', '_blank')" target="_blank" class="btn_primary btn_l">Find us</button>
       </div>
       <div class="spacing_64"></div>
     </div>
 
     <div class="spacing_48"></div>
     <h1>Unsere Projekte</h1>
-    <form class="masonry" id="gallery" action="artwork.php" request="GET">
+    <div class="spacing_16"></div>
+    <form class="masonry" action="artwork.php" request="GET">
       <?php
       $artists = ["Angela", "AnnaLena", "Eli", "Elli", "JuliaC", "JuliaP", "Juliana", "LauraH", "LauraM", "Leslie", "Magdalena", "Nassim", "Nataliia", "Raffaela", "Ricarda", "Samuel", "Sandra", "Thao", "Theresa", "Tobias", "Yunuo"];
-      $artistFullName = ["Angela Denninger", "Anna Lena Welter", "Elisabeth Frank", "Elisabeth Elmauer", "Julia Cox", "Julia Prottengeier", "Juliana Gutiérrez Wiest", "Laura Hollmann", "Laura Mayr", "Leslie Scholl", "Magdalena Ammer", "Nassim Chamseddine", "Nataliia Daliba", "Raffaela Kammer", "Ricarda Jocher", "Samuel Brookman-Amissah", "Sandra Kienle", "Diep-Thao Pham", "Theresa Zimmermann", "Tobias Biber", "Yunuo Zhang"];
-      $projects = ["Mirror", "Fassadengeschichten", "E-WEAR", "An Extract of Japanese Art and Culture", "Illumina", "Tinted moment", "ES-CULTURA", "In All Honesty", "Yokai Hunt", "Wild Skies", "Drawn to Life", "aura", "Milk, Lilusch und Twinkleinsel", "Concientia", "Sound is Touching", "D1V1NE: Championship", "YourSide", "ιδέα", "Wandel", "Hermit", "#Human Emotions"];
-
       //shuffle($artists);
-      foreach ($artists as $index => $artist) {
+      foreach ($artists as $artist) {
       ?>
         <button class="galleryImage" type="submit" name="artist" value="<?php echo $artist ?>">
           <img class="galleryImage" src="ArtworkPreviews/Artist=PP <?php echo $artist . ".jpg" ?>">
           <div class="overlay">
-            <h6><?php echo $artistFullName[$index] ?></h6>
-            <div class="spacing_8"></div>
-            <p class="body_standard"><?php echo $projects[$index] ?></p>
+            <?php
+            if (file_exists("JSONs/" . $artist . "_info.json")) {
+              $json = json_decode(file_get_contents("JSONs/" . $artist . "_info.json"));
+              $key = "artist-name";
+              if (isset($json->$key) && $json->$key != "") echo "<h6>" . $json->$key . "</h6>";
+            ?>
+              <div class="spacing_8"></div>
+            <?php
+              $key = "project-title";
+              if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
+            }
+            ?>
           </div>
         </button>
       <?php
@@ -77,7 +83,7 @@
       ?>
     </form>
 
-    <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+    <!--img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" /-->
   </section>
   <div class="spacing_64"></div>
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">

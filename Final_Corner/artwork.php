@@ -16,14 +16,14 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
     {
         global $json;
         if (!isset($json->$jsonKey[$arrayKey]) || $json->$jsonKey[$arrayKey] != "") {
-            return $default . " " . $arrayKey;
+            return $default;
         }
         return $json->$jsonKey[$arrayKey];
     }
     function createImg(string $id, string $class, string $imgName, string $altGerman, string $altEnglish)
     {
         global $artist;
-        echo "<img id=" . $id . " class = " . $class . " src = media/" . $artist . "_" . $imgName . ".jpg alt='" . $altGerman . " | " . $altEnglish . "' >";
+        echo "<img id=" . $id . " class='" . $class . "' src='media/" . $artist . "_" . $imgName . ".jpg' alt='" . $altGerman . " | " . $altEnglish . "' >";
     }
 ?>
     <!DOCTYPE html>
@@ -43,7 +43,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
     <body>
         <header>
-            <nav class="navbar">
+            <nav>
                 <ul class="menu body_large">
                     <li><a href="./index.php">
                             <h6>Home</h6>
@@ -51,9 +51,9 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
                     <li><a href="./about_us.php">
                             <h6>About us</h6>
                         </a></li>
-                    <li><a href="./contact.html">
+                    <!--li><a href="./contact.html">
                             <h6>Contact</h6>
-                        </a></li>
+                        </a></li-->
                 </ul>
             </nav>
         </header>
@@ -93,7 +93,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # PROJECT DESCRIPTION GERMAN
             $key = "project-description-german";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<div class='spacing_16'></div><p class='body_standard'>" . $json->$key . "</p>";
 
             echo "</div>";
 
@@ -105,7 +105,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # PROJECT DESCRIPTION ENGLISH
             $key = "project-description-english";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard " . $styleEN . "'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<div class='spacing_16'></div><p class='body_standard " . $styleEN . "'>" . $json->$key . "</p>";
 
             echo "</div>";
 
@@ -132,7 +132,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # ARTIST DESCRIPTION GERMAN
             $key = "artist-description-german";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<div class='spacing_16'></div><p class='body_standard'>" . $json->$key . "</p>";
 
             echo "</div>";
 
@@ -147,7 +147,7 @@ if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
 
             # ARTIST DESCRIPTION ENGLISH
             $key = "artist-description-english";
-            if (isset($json->$key) && $json->$key != "") echo "<p class='body_standard " . $styleEN . "'>" . $json->$key . "</p>";
+            if (isset($json->$key) && $json->$key != "") echo "<div class='spacing_16'></div><p class='body_standard " . $styleEN . "'>" . $json->$key . "</p>";
 
             echo "</div>";
 

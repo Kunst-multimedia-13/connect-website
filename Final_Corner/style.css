@@ -195,8 +195,12 @@ header>* {
     footer {
         grid-column: col-start / span 12;
     }
-    .masonry, .gallery{
+    .masonry{
         column-count: 2;
+    }
+
+    .gallery{
+        column-count: 3;
     }
 }
 
@@ -523,7 +527,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 300px;
+    width: 150px; /*300px with contact*/
 }
 
 .menu a {
