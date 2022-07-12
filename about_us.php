@@ -88,8 +88,20 @@
       }
       ?>
     </form>
+    <div class="spacing_32"></div>
+    <img id="artist-portrait" class="div-left-1of3" src="media/Cabbara_portrait.jpg" alt="Bashira Cabbara Portrait">
+    <div class="div-mid-2of3">
+      <h3>Bashira Cabbara</h3>
+      <div class="spacing_16"></div>
+      <p class="body_standard">Betreuerin und Unterstützerin von con:nect</p>
+    </div>
+    <div class="div-right-3of3">
+      <h3 class="textEN">Bashira Cabbara</h3>
+      <div class="spacing_16"></div>
+      <p class="body_standard textEN">Mentor und supporter of con:nect</p>
+    </div>
 
-    <img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+    <img class=" dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
     <!-- Danksagung -->
     <div class="div-left-1of2">
       <h1>Danksagung</h1>
