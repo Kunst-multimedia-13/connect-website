@@ -53,7 +53,7 @@
     <div class="div-left-1of2">
       <h1>Wer wir sind</h1>
       <div class="spacing_16"></div>
-      <p class="body_standard">So wie es zwischen Seele und Körper eine Verbindung gibt, ist auch der Körper mit seiner Umgebung verbunden.“ – Khalil Gibran<br /><br />Alles was wir in unserem Leben denken, tun und wollen, verbindet sich. Eindrücke, Personen, Gegenstände und viele weitere alltägliche Dinge verknüpfen wir miteinander. Es entsteht Neues – Kontakte, Erzeugnisse oder Erlebnisse. Alles Neue kann sich als schlecht oder als gut erweisen. Folglich versuchen wir die Verbindung entweder zu halten oder zu lösen. Es baut sich Stück für Stück ein großes Netzwerk aus, welches letztendlich unsere Identität beschreibt.</p>
+      <p class="body_standard">„So wie es zwischen Seele und Körper eine Verbindung gibt, ist auch der Körper mit seiner Umgebung verbunden.“ – Khalil Gibran<br /><br />Alles was wir in unserem Leben denken, tun und wollen, verbindet sich. Eindrücke, Personen, Gegenstände und viele weitere alltägliche Dinge verknüpfen wir miteinander. Es entsteht Neues – Kontakte, Erzeugnisse oder Erlebnisse. Alles Neue kann sich als schlecht oder als gut erweisen. Folglich versuchen wir die Verbindung entweder zu halten oder zu lösen. Es baut sich Stück für Stück ein großes Netzwerk aus, welches letztendlich unsere Identität beschreibt.</p>
     </div>
     <div class="div-right-2of2">
       <h1 class="textEN">Who we are</h1>

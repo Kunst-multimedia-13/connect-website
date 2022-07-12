@@ -597,6 +597,24 @@ ul {
     height: 500px;
 }
 
+.footer_Logo_Container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer_Logo {
+    padding-right: 24px;
+    padding-bottom: 24px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.footer_spender {
+    max-width: 150px;
+    max-height: 50px;
+}
+
 
 /*--------------------------------------------------------- Spacing ---------------------------------------------------------*/
 

@@ -43,7 +43,7 @@
         <div class="spacing_16"></div>
         <a href="https://kunstlabor.org/" class="body_standard" style="font-weight: bold; text-decoration: underline" target="_blank">KUNSTLABOR 2 MUNICH</a>
         <div class="spacing_8"></div>
-        <p class="body_standard">Dachauer Str. 90, 80335 Munich</p>
+        <p class="body_standard">Dachauer Str. 90, 80335 Munich<br>Eintritt frei / Admission free</p>
         <div class="spacing_32"></div>
         <h5 style="color: var(--primary)"> Vernissage Freitag / Friday, </br> 15. JUL 19:00 / 7 pm</h5>
         <div class="spacing_32"></div>
@@ -125,7 +125,23 @@
       <div class="spacing_16"></div>
       <p class="caption">copyright © 2022 con:nect</p>
       <div class="spacing_16"></div>
-      <div class="LMU_Logo"><img src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" /></div>
+      <div class="footer_Logo_Container">
+        <img class="footer_Logo" src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" />
+        <a href="./index.php"><img class="footer_Logo" src="assets/Connect_Logo_Main.svg" alt="connect Logo" /></a>
+      </div>
+      <div class="spacing_64"></div>
+      <h5 style="color: var(--secondary-shade1)">Unsere Förderer / Our supporters</h5>
+      <div class="spacing_32"></div>
+
+      <div class="footer_Logo_Container">
+        <img class="footer_Logo footer_spender" src="assets/spender/lfa.png" alt="Förderbank Bayern Logo" />
+        <img class="footer_Logo footer_spender" src="assets/spender/xrhub.png" alt="XR Hub Logo" />
+        <img class="footer_Logo footer_spender" src="assets/spender/boesner.png" alt="Boesner Logo" />
+        <img class="footer_Logo footer_spender" src="assets/spender/davero.png" alt="Davero Dialog Logo" />
+        <img class="footer_Logo footer_spender" src="assets/spender/euraneg.png" alt="Euraneg Logo" />
+        <img class="footer_Logo footer_spender" src="assets/spender/interpage.png" alt="Interpage Logo" />
+      </div>
+      <div class="spacing_64"></div>
   </footer>
 </body>
 
