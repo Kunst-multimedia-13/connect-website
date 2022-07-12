@@ -214,7 +214,7 @@
          <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
              <div class="footer-content">
                  <div class="spacing_48"></div>
-                 <h3 style="height: 45px">Kontakt</h3>
+                 <h3 style="height: 45px">Kontakt / Contact</h3>
                  <div class="spacing_32"></div>
                  <h6 class="height" style="color: var(--primary)">email</h6>
                  <div class="spacing_16"></div>
@@ -223,9 +223,9 @@
                  <div class="spacing_32"></div>
 
 
-                 <h6 class="height" style="color: var(--primary)">Öffnungszeiten</h6>
+                 <h6 class="height" style="color: var(--primary)">Öffnungszeiten / Opening hours</h6>
                  <div class="spacing_16"></div>
-                 <p class="body_large"> Freitag ab 19:00 </br> Samstag 10:00 – 20:00</br> Sonntag 10:00 – 17:00</p>
+                 <p class="body_large"> Freitag / Friday 19:00 – 0:00 </br> Samstag / Saturday 10:00 – 20:00</br> Sonntag / Sunday 10:00 – 17:00</p>
 
                  <div class="spacing_32"></div>
 
@@ -250,7 +250,23 @@
                  <div class="spacing_16"></div>
                  <p class="caption">copyright © 2022 con:nect</p>
                  <div class="spacing_16"></div>
-                 <div class="LMU_Logo"><img src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" /></div>
+                 <div class="footer_Logo_Container">
+                     <img class="footer_Logo" src="assets/Connect_Logo_LMU_Big.svg" alt="LMU Logo" />
+                     <a href="./index.php"><img class="footer_Logo" src="assets/Connect_Logo_Main.svg" alt="connect Logo" /></a>
+                 </div>
+                 <div class="spacing_64"></div>
+                 <h5 style="color: var(--secondary-shade1)">Unsere Förderer / Our supporters</h5>
+                 <div class="spacing_32"></div>
+
+                 <div class="footer_Logo_Container">
+                     <img class="footer_Logo footer_spender" src="assets/spender/lfa.png" alt="Förderbank Bayern Logo" />
+                     <img class="footer_Logo footer_spender" src="assets/spender/xrhub.png" alt="XR Hub Logo" />
+                     <img class="footer_Logo footer_spender" src="assets/spender/boesner.png" alt="Boesner Logo" />
+                     <img class="footer_Logo footer_spender" src="assets/spender/davero.png" alt="Davero Dialog Logo" />
+                     <img class="footer_Logo footer_spender" src="assets/spender/euraneg.png" alt="Euraneg Logo" />
+                     <img class="footer_Logo footer_spender" src="assets/spender/interpage.png" alt="Interpage Logo" />
+                 </div>
+                 <div class="spacing_64"></div>
          </footer>
      </body>
  <?php
