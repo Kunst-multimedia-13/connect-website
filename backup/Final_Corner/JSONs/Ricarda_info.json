@@ -1,0 +1,30 @@
+{
+    "tags": ["interactive Installation", "sound art", "visual art", "auditory induced emotion"],
+    "artist-name": "Ricarda Jocher",
+    "project-title": "Sound is Touching",
+    "project-description-german": "Der Entfaltung von Gefühlen kann durch Musik der Raum gegeben werden, der völlig freie Emotionen zulässt und den Menschen meist viel zu selten erfahren. „Sound Is Touching“ ist eine interaktive Klang- und Lichtinstallation. Drei unterschiedlich gestaltete dreidimensionale Interaktionsobjekte stellen die Grundemotionen Wut, Trauer und Freude dar. Wenn man sich diesen nähert und sie berührt, werden Klänge ausgelöst, die eine immersive Erfahrung in der jeweiligen Gefühlswelt schaffen. Gleichzeitig färbt eine durch das Objekt verursachte Lichtprojektion den Raum in der Farbstimmung der Empfindung und unterstützt so das Erleben der spezifischen Emotion. Entfernung und Geschwindigkeit werden berücksichtigt und der Ton und das Licht entsprechend manipuliert, so dass auch eine Mischung entstehen kann, wenn die verschiedenen Emotionen gleichzeitig initiiert werden. Die Kombination aus Klang, Licht, Design und Technologie schafft ein immersives Erlebnis, das uns in eine Welt der Emotionen eintauchen lässt. Die Klang- und Lichtobjekte sind mit leitfähiger Farbe bemalt, die über einen eingebauten Mikrocontroller einen Spannungswert an den Computer vermitteln und dort mit Teensyduino und Processing verarbeitet werden. Der Ton und das Licht wird entsprechend der Spannung vom Computer gesteuert und über Lautsprecher und LED‘s ausgegeben. Bei der Konzeption, dem Design und der Umsetzung des Projekts wurden mehrere Arbeitstechniken eingesetzt, sowohl analog als auch digital.",
+    "project-description-english": "Through music, the unfolding of feelings can be given the space which is usually only rarely experienced. „Sound Is Touching“ is an interactive sound and light installation. Three differently designed three-dimensional objects represent the basic emotions of anger, sadness and joy. When a visitor approaches and touches the objects, sounds are triggered that create an immersive experience in the respective emotional world. At the same time, a light projection caused by the respective object colours the room in the colour mood of the sensation and thus supports the experience of the emotions. Distance and speed are taken into account and sound and light are manipulated accordingly, so that a mixture can also be created when the different emotions are triggered simultaneously. The combination of sound, light, design and technology creates an immersive experience that immerses us in a world of emotions. The sound and light objects are painted with conductive paint that transmits a voltage value to the computer via a built-in microcontroller, where it is processed using Teensyduino and Processing. The sound and light is controlled by the computer according to the voltage and output via loudspeakers and LEDs. Several working techniques were used in the conception, design and implementation of the project, both analogue and digital.",
+    "artist-description-german": "Für Ricarda war es schon immer wichtig, sich musikalisch und künstlerisch auszudrücken, um ihren Gefühlen Raum geben zu können. Mit ihrem Studium in „Kunst und Multimedia“ ist gleichzeitig ein technisches Interesse gewachsen, das ihr ganz neue Möglichkeiten des kreativen Schaffens eröffnet hat. Mit der Projektarbeit konnte sie sowohl technische und musikalische Elemente verbinden als auch ihre Leidenschaften vereinen und somit gleichzeitig ihren Emotionen Ausdruck verleihen.",
+    "artist-description-english": "For Ricarda, it has always been important to express herself musically and artistically in order to give space to her feelings. With her studies in „Art and Multimedia“, a technical interest has also grown, which has opened up completely new possibilities for her creative work. With the project work, she was able to combine technical and musical elements as well as her passions and thus express her emotions at the same time.",
+    "images-altTexts-german": [],
+    "images-altTexts-english": [],
+    "videos-altTexts-german": [],
+    "videos-altTexts-english": [],
+    "email": "",
+    "socials": [
+        { "website": "" },
+        { "instagram": "https://www.instagram.com/ricardamarai/" },
+        { "linkedin": "https://www.linkedin.com/in/ricarda-j-ab1871209/" },
+        { "behance": "" },
+        { "artstation": "" },
+        { "dribbble": "" },
+        { "facebook": "" },
+        { "tiktok": "" },
+        { "pinterest": "" },
+        { "twitter": "" },
+        { "youtube": "" },
+        { "soundcloud": "https://soundcloud.com/ricardamarai" },
+        { "tumblr": "" },
+        { "github": "" }
+    ]
+}
