@@ -123,6 +123,39 @@
       <img src="assets/spender/boesner.png">
     </span>
 
+    <style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <h1>Katalog / Catalogue</h1>
+    <script src="https://players.yumpu.com/hub.js"> </script>
+    <div id="yumpuMagazineContainer" style="width:100%; height:600px;"> </div>
+    <script>
+      var myYumpu = new Yumpu();
+      myYumpu.create_player("#yumpuMagazineContainer", "", {
+        lang: "en",
+        embed_id: "VxLOcjEKTIUX04Ap",
+        embedded: true
+      });
+      document.getElementById("embedCategoryLink").style.opacity = "0 !important";
+    </script>
+
   </section>
   <div class="spacing_64"></div>
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
