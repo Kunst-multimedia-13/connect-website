@@ -10,7 +10,13 @@
 
      <!-- Picture carousel by flickity -->
      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+     <script>
+        window.onload = ()=>{
+            let carouselScript = document.createElement('script');
+            carouselScript.src = "https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js";
+            document.body.append(carouselScript);
+        }
+     </script>
  </head>
  <?php
     if (file_exists("JSONs/" . $_GET['artist'] . "_info.json")) {
