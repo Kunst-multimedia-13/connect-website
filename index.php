@@ -32,6 +32,9 @@
     </nav>
   </header>
   <section class="content">
+
+  <!--info-->
+
     <div class="logo-div">
       <img class="logo-large" src="https://cdn.glitch.global/cd1845f1-7885-4da2-ad8b-cd3882b8f972/Connect_Logo_Main.svg?v=1652605879199" alt="con.nect" />
       <div class="spacing_24"></div>
@@ -43,7 +46,7 @@
         <div class="spacing_16"></div>
         <a href="https://kunstlabor.org/" class="body_standard" style="font-weight: bold; text-decoration: underline" target="_blank">KUNSTLABOR 2 MUNICH</a>
         <div class="spacing_8"></div>
-        <p class="body_standard">Dachauer Str. 90, 80335 Munich<br>Eintritt frei / Admission free</p>
+        <p class="body_standard">Dachauer Str. 90, 80335 Munich<br>Eintritt frei / free admission</p>
         <div class="spacing_32"></div>
         <h5 style="color: var(--primary)"> Vernissage Freitag / Friday, </br> 15. JUL 19:00 / 7 pm</h5>
         <div class="spacing_32"></div>
@@ -52,8 +55,10 @@
       <div class="spacing_64"></div>
     </div>
 
+    <!--project gallery-->
+
     <div class="spacing_48"></div>
-    <h1>Unsere Projekte</h1>
+    <h1>Projekte / Projects</h1>
     <div class="spacing_16"></div>
     <form class="masonry" action="artwork.php" request="GET">
       <?php
@@ -62,7 +67,7 @@
       foreach ($artists as $artist) {
       ?>
         <button class="galleryImage" type="submit" name="artist" value="<?php echo $artist ?>">
-          <img class="galleryImage" src="ArtworkPreviews/Artist=PP <?php echo $artist . ".jpg" ?>">
+          <img class="galleryImage" src="media/<?php echo $artist . "_thumbnail.jpg" ?>">
           <div class="overlay">
             <?php
             if (file_exists("JSONs/" . $artist . "_info.json")) {
@@ -83,8 +88,47 @@
       ?>
     </form>
 
-    <!--img class="dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" /-->
+    <img class=" dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+
+    <!--catalogue-->
+
+    <style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <h1>Katalog / Catalogue</h1>
+    <script src="https://players.yumpu.com/hub.js"> </script>
+    <div id="yumpuMagazineContainer" style="width:100%; height:600px;"> </div>
+    <script>
+      var myYumpu = new Yumpu();
+      myYumpu.create_player("#yumpuMagazineContainer", "", {
+        lang: "en",
+        embed_id: "VxLOcjEKTIUX04Ap",
+        embedded: true
+      });
+      document.getElementById("embedCategoryLink").style.opacity = "0 !important";
+    </script>
+
   </section>
+
+  <!--footer-->
+
   <div class="spacing_64"></div>
   <footer class="main-footer" style="background-color: var(--secondary-beige); z-index: 0">
     <div class="footer-content">
@@ -121,7 +165,7 @@
       <div class="spacing_32"></div>
 
 
-      <a href="privacy-policy.html" class="body_standard" style="font-weight: bold; text-decoration: underline">Datenschutzbestimmung</a>
+      <a href="privacy-policy.html" class="body_standard" style="font-weight: bold; text-decoration: underline">Datenschutzbestimmung / Privacy Policy</a>
       <div class="spacing_16"></div>
       <p class="caption">copyright © 2022 con:nect</p>
       <div class="spacing_16"></div>
