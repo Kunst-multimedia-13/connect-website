@@ -93,12 +93,12 @@
     <div class="div-mid-2of3">
       <h3>Bashira Cabbara</h3>
       <div class="spacing_16"></div>
-      <p class="body_standard">Betreuerin und Unterstützerin von con:nect</p>
+      <p class="body_standard">con:nect beinhaltet vieles, und steht nicht nur für die Abschlussausstellung des 13. Jahrganges des Studiengangs Kunst und Multimedia, sondern auch sinnbildlich für eine Generation, für die es gilt, (wieder) Verbindungen herzustellen: sowohl im Hinblick auf den Zeitgeist und auf gesellschaftliche Entwicklungen als auch auf technischer, aber auch auf zwischenmenschlicher Ebene.</p>
     </div>
     <div class="div-right-3of3">
       <h3 class="textEN">Bashira Cabbara</h3>
       <div class="spacing_16"></div>
-      <p class="body_standard textEN">Mentor und supporter of con:nect</p>
+      <p class="body_standard textEN">con:nect contains many aspects and not only stands for the final exhibition of the 13th year of the Art and Multimedia course, it is also emblematic for a generation for which it is important to (re)establish connections: both with regard to the zeitgeist and to social developments, as well as on a technical, but also on an interpersonal level.</p>
     </div>
 
     <img class=" dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
