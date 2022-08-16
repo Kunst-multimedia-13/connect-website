@@ -100,8 +100,32 @@
       <div class="spacing_16"></div>
       <p class="body_standard textEN">con:nect contains many aspects and not only stands for the final exhibition of the 13th year of the Art and Multimedia course, it is also emblematic for a generation for which it is important to (re)establish connections: both with regard to the zeitgeist and to social developments, as well as on a technical, but also on an interpersonal level.</p>
     </div>
-
     <img class=" dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+    <div class="spacing_16"></div>
+
+    <!-- Dokuvideo -->
+    <style>
+      .iframe-video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+      }
+
+      .iframe-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    
+    <div class="iframe-video-container">
+      <iframe class="iframe-video" src="https://www.youtube.com/embed/p8UK5yQk8nE" title="Documentation Video | Dokumentationsvideo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <img class=" dots" src="assets/Connect_Illus_Dots.svg" alt="divider dots" />
+
     <!-- Danksagung -->
     <div class="div-left-1of2">
       <h1>Danksagung</h1>

@@ -209,6 +209,8 @@ header>* {
     }
 }
 
+
+
 #header-thumbnails>* {
     padding-right: 16px;
 }
@@ -459,6 +461,20 @@ a:visited {
 
 .textEN {
     color: var(--secondary-shade1);
+}
+
+.iframe-video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.iframe-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
